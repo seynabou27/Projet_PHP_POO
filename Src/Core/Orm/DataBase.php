@@ -5,11 +5,11 @@
     
     class DataBase {
         //pdo=null=> connexion est fermée
-        ///private PDO|null $pdo=null;
+        //private PDO|null $pdo=null;
         //private int | float $x
-        private const USER_BD="";
-        private const PASSWORD_BD="";
-        private const HOST_BD="";
+        private const USER_BD="root";
+        private const PASSWORD_BD="Nabou";
+        private const HOST_BD="localhost";
 
         public function __construct(){
             $this->openConnexion();

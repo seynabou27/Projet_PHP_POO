@@ -6,6 +6,5 @@ abstract class AbstractObject{
     protected string $primarykey;
     protected database $database;
 
-
 }
 ?>
