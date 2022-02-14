@@ -1,10 +1,15 @@
-<?php
-namespace App\Core\Orm;
+<?php 
+ namespace App\Core\Orm;
 
-abstract class AbstractObject{
+class AbstractObject{
     protected string $tableName;
-    protected string $primarykey;
-    protected database $database;
+    protected string $primaryKey;
+    //OneToOne
+    protected DataBase $dataBase;
+
+    public function __construct()
+    {
+        $this->dataBase=new DataBase();
+    }
 
 }
-?>

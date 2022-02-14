@@ -11,5 +11,7 @@
             "email": "seynabouka09@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "doctrine/collections": "^1.6"
+    }
 }

@@ -7,6 +7,10 @@ namespace Composer\Autoload;
 class ComposerStaticInit2949e522b130f2fa71e2a8aac168e047
 {
     public static $prefixLengthsPsr4 = array (
+        'D' => 
+        array (
+            'Doctrine\\Common\\Collections\\' => 28,
+        ),
         'A' => 
         array (
             'App\\' => 4,
@@ -14,6 +18,10 @@ class ComposerStaticInit2949e522b130f2fa71e2a8aac168e047
     );
 
     public static $prefixDirsPsr4 = array (
+        'Doctrine\\Common\\Collections\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/collections/lib/Doctrine/Common/Collections',
+        ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
