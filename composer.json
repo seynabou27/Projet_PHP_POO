@@ -1,0 +1,17 @@
+{
+    "name": "poo/mvc",
+    "autoload": {
+        "psr-4": {
+            "App\\": "Src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "seynabou",
+            "email": "seynabouka09@gmail.com"
+        }
+    ],
+    "require": {
+        "doctrine/collections": "^1.6"
+    }
+}
