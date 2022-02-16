@@ -16,13 +16,20 @@ class Router{
     public function resolve(){
     //controller/action
        $url= $this->request->getUrl();
+       
        $controllerClass= "App\Controllers\\";
        $controllerClass.=empty($url[0])?"SecurityController":ucfirst($url[0])."Controller";
        $controllerAction=empty($url[1])?"login":$url[1];
+       
        if(class_exists($controllerClass)){
+        
             $objController=new  $controllerClass;
+         /*    var_dump($objController);
+        die(); */
             if(method_exists($objController, $controllerAction)) {
+                
                 call_user_func_array([$objController,$controllerAction],[$this->request]);
+                
             } else{
                 $this->erreurCtrl->redirect("erreur/pageNotFound") ;
             }

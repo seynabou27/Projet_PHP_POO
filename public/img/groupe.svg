@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="506" height="83" viewBox="0 0 506 83">
+  <g id="Groupe_151595" data-name="Groupe 151595" transform="translate(-240 -684)">
+    <g id="Groupe_151588" data-name="Groupe 151588">
+      <rect id="Rectangle_684" data-name="Rectangle 684" width="506" height="83" rx="16" transform="translate(240 684)" fill="#1b2a40"/>
+      <g id="apartment_black_24dp_1_" data-name="apartment_black_24dp (1)" transform="translate(282 708)">
+        <g id="Groupe_151583" data-name="Groupe 151583">
+          <rect id="Rectangle_686" data-name="Rectangle 686" width="36" height="36" transform="translate(0 0)" fill="none"/>
+        </g>
+        <g id="Groupe_151584" data-name="Groupe 151584" transform="translate(4.5 4.5)">
+          <path id="Tracé_13088" data-name="Tracé 13088" d="M24,15V3H9V9H3V30H15V24h3v6H30V15ZM9,27H6V24H9Zm0-6H6V18H9Zm0-6H6V12H9Zm6,6H12V18h3Zm0-6H12V12h3Zm0-6H12V6h3Zm6,12H18V18h3Zm0-6H18V12h3Zm0-6H18V6h3Zm6,18H24V24h3Zm0-6H24V18h3Z" transform="translate(-3 -3)" fill="#fff"/>
+        </g>
+      </g>
+      <g id="devices_black_24dp_1_" data-name="devices_black_24dp (1)" transform="translate(567 708)">
+        <path id="Tracé_13089" data-name="Tracé 13089" d="M0,0H36V36H0Z" fill="none"/>
+        <path id="Tracé_13090" data-name="Tracé 13090" d="M6,7H33V4H6A3.009,3.009,0,0,0,3,7V23.5H0V28H21V23.5H6Zm28.5,3h-9A1.5,1.5,0,0,0,24,11.5v15A1.5,1.5,0,0,0,25.5,28h9A1.5,1.5,0,0,0,36,26.5v-15A1.5,1.5,0,0,0,34.5,10ZM33,23.5H27V13h6Z" transform="translate(0 2)" fill="#fff"/>
+      </g>
+      <g id="king_bed_black_24dp" transform="translate(377 708)">
+        <g id="Groupe_151585" data-name="Groupe 151585">
+          <rect id="Rectangle_687" data-name="Rectangle 687" width="36" height="36" transform="translate(0 0)" fill="none"/>
+        </g>
+        <g id="Groupe_151587" data-name="Groupe 151587" transform="translate(3 7.5)">
+          <g id="Groupe_151586" data-name="Groupe 151586">
+            <rect id="Rectangle_688" data-name="Rectangle 688" width="8" height="4" transform="translate(6 3.5)" fill="none"/>
+            <rect id="Rectangle_689" data-name="Rectangle 689" width="7" height="4" transform="translate(17 3.5)" fill="none"/>
+            <path id="Tracé_13093" data-name="Tracé 13093" d="M29,12.5V8a3.009,3.009,0,0,0-3-3H8A3.009,3.009,0,0,0,5,8v4.5a3.009,3.009,0,0,0-3,3V23H3.995L5,26H6.5l1.005-3H26.51l.99,3H29l1.005-3H32V15.5A3.009,3.009,0,0,0,29,12.5Zm-13.5,0H8V8h7.5Zm10.5,0H18.5V8H26Z" transform="translate(-2 -5)" fill="#fff"/>
+          </g>
+        </g>
+      </g>
+      <g id="school_black_24dp" transform="translate(472 708)">
+        <path id="Tracé_13096" data-name="Tracé 13096" d="M0,0H36V36H0Z" fill="none"/>
+        <path id="Tracé_13097" data-name="Tracé 13097" d="M7,18.27v6L17.5,30,28,24.27v-6L17.5,24ZM17.5,3,1,12l16.5,9L31,13.635V24h3V12Z" transform="translate(0.5 1.5)" fill="#fff"/>
+      </g>
+      <g id="storage_black_24dp_1_" data-name="storage_black_24dp (1)" transform="translate(662 708)">
+        <path id="Tracé_13098" data-name="Tracé 13098" d="M0,0H36V36H0Z" fill="none"/>
+        <path id="Tracé_13099" data-name="Tracé 13099" d="M2,28H32V22H2Zm3-4.5H8v3H5ZM2,4v6H32V4ZM8,8.5H5v-3H8ZM2,19H32V13H2Zm3-4.5H8v3H5Z" transform="translate(1 2)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -13,6 +13,7 @@ abstract class AbstractController implements ControllerInterface{
         extract($data);
         //Recuperer le contenu des vues dans la variable $content_for_views
          ob_start();
+       //  var_dump(PATH_VIEWS."".$views); die;
             require_once(PATH_VIEWS."".$views);
         $content_for_views=ob_get_clean();
         require_once(PATH_VIEWS."".$this->layout.".html.php");

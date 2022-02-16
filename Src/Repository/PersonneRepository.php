@@ -8,8 +8,8 @@ class PersonneRepository extends AbstractRepository{
     public function __construct()
     {
         parent::__construct();
-        $this->tableName="users";
-        $this->primaryKey="id_user";
+        $this->tableName="personne";
+        $this->primaryKey="id_personne";
     }
    
      function findAll():array{
@@ -18,7 +18,7 @@ class PersonneRepository extends AbstractRepository{
       }
 
       public function findPersonneByLoginAndPassword(string $login,string $password):object|bool{
-        $sql="select * from $this->tableName where login=? and password=?";
+        $sql="select * from $this->tableName where email=? and password=?";
            return $this->findBy($sql,[$login,$password],true);
 
       }

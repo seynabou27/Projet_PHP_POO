@@ -9,7 +9,7 @@ class EtudiantRepository extends PersonneRepository {
         parent::__construct();
         $this->role="ROLE_ETUDIANT";
     }
-    function findAll():array{
+    function  findAll():array{
         $sql="select * from $this->tableName where role like ?  ";
          return $this->dataBase->executeSelect( $sql,[$this->role ]);
      }

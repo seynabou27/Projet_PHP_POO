@@ -6,17 +6,28 @@ use App\Core\AbstractController;
 use App\Core\Role;
 use App\Core\Session;
 use App\Repository\EtudiantRepository;
+use App\Repository\PavillonRepository;
 use App\Repository\PersonneRepository;
+use App\Repository\RPRepository;
 
 class SecurityController extends AbstractController{
 
     private PersonneRepository $persRepo;
     private EtudiantRepository $etuRepo;
-    public function __construct()
-    {
+    private PavillonRepository $pavillon;
+    private RPRepository $rpRepo;
+
+    private Request $request;
+
+    public function __construct(){
           parent::__construct();
           $this->persRepo=new PersonneRepository;
           $this->etuRepo=new EtudiantRepository;
+          $this->request=new Request;
+          $this->pavillon=new PavillonRepository;
+          $this->rpRepo=new RPRepository;
+
+
     }
     public function login(){
           $this->layout="layout.connexion";
@@ -36,8 +47,9 @@ class SecurityController extends AbstractController{
                 Session::setSession("errors",$arrErr);
                 $this->redirect("security");
             }else{
+               
                 Session::setSession(Role::KEY_SESSION_USER, $user);
-                $this->redirect("security/showUsers");
+                $this->redirect("security/showRp");
             } 
         }else{
                 Session::setSession("errors",$this->validator->getErreurs() );
@@ -52,13 +64,19 @@ class SecurityController extends AbstractController{
         $this->redirect("security");
     }
 
-    public function showUsers(){
-        $users=$this->persRepo->findAll();
-        $this->render("security/users.html.php",["users"=>$users]);
+    public function showRp(){
+        $users=$this->rpRepo->findAll();
+        $this->render("security/responsable.html.php",["users"=>$users]);
     }
     public function showEtudiants(){
         $users=$this->etuRepo->findAll();
-        $this->render("security/users.html.php",["users"=>$users]);
+        $this->render("etudiant/liste.etudiant.html.php",["users"=>$users]);
     }
+   /*  public function voirPavillon(){
+        $pav=$this->pavillon->findAll_pavillon();
+        die('gtuhuh');
+        $this->render("pavillon/liste.pavillon.html.php",["pav"=>$pav]);
+    } */
+    
 
 }
