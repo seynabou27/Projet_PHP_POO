@@ -4,12 +4,14 @@ namespace App\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 
 class Etudiant extends Personne implements EntityInterface{
-    
+
     private string $matricule;
     private string $tuteur;
+    private string $date;
+    private int $telephone;
    //Propriete Navigationnelle OneToMany
    //Collection
-   private ArrayCollection $inscriptions;
+ ///  private ArrayCollection $inscriptions;
 
 
 
@@ -17,7 +19,6 @@ class Etudiant extends Personne implements EntityInterface{
    {
        parent::__construct();
        $this->role="ROLE_ETUDIANT";
-       $this->inscriptions=new ArrayCollection();
    }
     /**
      * Get the value of tuteur
@@ -81,10 +82,24 @@ public static function  fromArray(object $personne):array{
     $arr=  array_values((array)$personne);
     $arr[]=$arr[0];
     $arr[]=$arr[1];
+    $arr[]=$arr[2];
+    $arr[]=$arr[3];
+    $arr[]=$arr[4];
+    $arr[]=$arr[6];
+    $arr[]=null;
     $arr[]="";
-     unset($arr[0]);
-     unset($arr[1]);
-     unset($arr[2]);
+    $arr[]="";
+    $arr[]="";
+    $arr[]=null;
+    $arr[]=$arr[5];
+    unset($arr[0]);
+    unset($arr[1]);
+    unset($arr[2]);
+    unset($arr[3]);
+    unset($arr[4]);
+    unset($arr[5]);
+    unset($arr[6]);
+    
      return  array_values($arr);
   }
 
@@ -105,6 +120,49 @@ public static function  fromArray(object $personne):array{
     public function setMatricule($matricule)
     {
         $this->matricule = $matricule;
+
+        return $this;
+    }
+     /**
+     * Get the value of date
+     */ 
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * Set the value of date
+     *
+     * @return  self
+     */ 
+    public function setDate($date)
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+     
+
+    
+
+    /**
+     * Get the value of telephone
+     */ 
+    public function getTelephone()
+    {
+        return $this->telephone;
+    }
+
+    /**
+     * Set the value of telephone
+     *
+     * @return  self
+     */ 
+    public function setTelephone($telephone)
+    {
+        $this->telephone = $telephone;
 
         return $this;
     }

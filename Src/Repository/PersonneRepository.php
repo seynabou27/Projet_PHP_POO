@@ -22,5 +22,10 @@ class PersonneRepository extends AbstractRepository{
            return $this->findBy($sql,[$login,$password],true);
 
       }
+      public function findEtudiantByInscription(string $login,string $password):object|bool{
+        $sql="select * from $this->tableName where email=? and password=?";
+           return $this->findBy($sql,[$login,$password],true);
+
+      }
       
 }

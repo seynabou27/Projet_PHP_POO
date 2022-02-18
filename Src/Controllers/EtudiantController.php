@@ -28,6 +28,12 @@ class EtudiantController extends AbstractController{
     public function showEtudiants(){
       $users=$this->etuRepo->findAll();
       $this->render("etudiant/liste.etudiant.html.php",["users"=>$users]);
+  }  
+  
+  public function showEtudiants1(){
+      $users=$this->etuRepo->insert();
+      /* die('gtuhuh'); */
+      $this->render("etudiant/ajout.etudiant.html.php",["users"=>$users]);
   }   
 }
 

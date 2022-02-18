@@ -5,6 +5,8 @@ use App\Core\Request;
 use App\Core\AbstractController;
 use App\Core\Role;
 use App\Core\Session;
+use App\Entity\Etudiant;
+use App\Manager\PersonneManager;
 use App\Repository\EtudiantRepository;
 use App\Repository\PavillonRepository;
 use App\Repository\PersonneRepository;
@@ -26,6 +28,7 @@ class SecurityController extends AbstractController{
           $this->request=new Request;
           $this->pavillon=new PavillonRepository;
           $this->rpRepo=new RPRepository;
+         
 
 
     }
@@ -59,6 +62,43 @@ class SecurityController extends AbstractController{
        }
         $this->render("security/login.html.php");
     }
+    //inscription
+    public function inscription(Request $request){
+        $arrErr=[];
+         if($request->isPost()){
+           extract($request->request());
+           $this->validator->isVide($login,"login");
+           $this->validator->isVide($matri,"matri");
+           $this->validator->isVide($nom,"nom");
+           $this->validator->isVide($prenom,"prenom");
+           $this->validator->isVide($date,"date");
+           $this->validator->isVide($tuteur,"tuteur");
+           if($this->validator->valid()){
+           //  $user= $this->persRepo->findEtudiantByInscription($login,$password,$nom,$prenom,$date,$tele,$matri);
+            // creer un objet type etudiant
+            // modifier les valeurs
+            //from :: transformer objet en tableau
+            //
+            $etu=new Etudiant;
+            $personne=new PersonneManager;
+            $etu->setNom($nom)
+                ->setPrenom($prenom);
+            $etu->setLogin($login);
+            $etu->setMatricule($matri)
+                ->setTuteur($tuteur);
+            $etu->setDate($date);
+            $insert= Etudiant::fromArray($etu); 
+            $personne->insert($insert);
+
+            }else{
+                 Session::setSession("errors",$this->validator->getErreurs() );
+                 $this->redirect("etudiant/showEtudiants1");
+            }
+            $this->redirect("etudiant/showEtudiants");
+        }
+         $this->render("etudiant/ajout.etudiant.html.php");
+     }
+
     public function logout(){
         Session::destroySession();
         $this->redirect("security");
@@ -72,6 +112,7 @@ class SecurityController extends AbstractController{
         $users=$this->etuRepo->findAll();
         $this->render("etudiant/liste.etudiant.html.php",["users"=>$users]);
     }
+     
    /*  public function voirPavillon(){
         $pav=$this->pavillon->findAll_pavillon();
         die('gtuhuh');

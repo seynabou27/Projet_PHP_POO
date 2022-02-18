@@ -1,6 +1,6 @@
 
 <nav class="navbar navbar-expand-lg navbar-light">
-  <a class="navbar-brand infos" href="#"><b>Alloc</b></a>
+  <a class="navbar-brand infos" href="#"><b>UCAD</b></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -14,7 +14,7 @@
         <a class="nav-link" href="<?=WEBROOT."etudiant/showEtudiants"?>">Etudiant</a>
       </li>
      
-      
+
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Pavillon
@@ -93,9 +93,16 @@
   padding-left: 9%;
   margin-right: 3%;
 }
+.navbar-expand-lg .navbar-nav {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin-left: 5%;
+}
 
 .deconnexion{
-  margin-right: 10%;
+  margin-right: 4%;
   padding-right: 2%;
   border: 1px solid white;
   background-color: white;

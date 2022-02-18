@@ -2,7 +2,7 @@
   <div>
      <p class="text"><b>Bienvenue! <br>  Unuversité Cheikh Anta Diop</b></p>
  
-  <img src="./../img/groupe2.png" alt="hhhhh">
+    <img src="./../img/groupe2.png" alt="hhhhh">
 
   </div>
 

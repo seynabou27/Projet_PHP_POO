@@ -2,7 +2,8 @@
 namespace App\Entity;
 class Personne {
     protected int $id;
-    protected string $nomComplet;
+    protected string $nom;
+    protected string $prenom;
     protected string $login;
     protected string $password;
     protected string $role="ROLE_PERSONNE";
@@ -33,21 +34,41 @@ class Personne {
     }
 
     /**
-     * Get the value of nomComplet
+     * Get the value of nom
      */ 
-    public function getNomComplet()
+    public function getNom()
     {
-        return $this->nomComplet;
+        return $this->nom;
     }
 
     /**
-     * Set the value of nomComplet
+     * Set the value of nom
      *
      * @return  self
      */ 
-    public function setNomComplet($nomComplet)
+    public function setNom($nom)
     {
-        $this->nomComplet = $nomComplet;
+        $this->nom = $nom;
+
+        return $this;
+    }
+
+     /**
+     * Get the value of prenom
+     */ 
+    public function getPrenom()
+    {
+        return $this->prenom;
+    }
+
+    /**
+     * Set the value of prenom
+     *
+     * @return  self
+     */ 
+    public function setPrenom($prenom)
+    {
+        $this->prenom = $prenom;
 
         return $this;
     }

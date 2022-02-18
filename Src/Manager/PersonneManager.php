@@ -14,7 +14,7 @@ class PersonneManager extends AbstractManager{
    
 
     public function insert(array $model):int{
-         $sql="insert into  $this->tableName (nom_complet,login,password,role,tuteur,matricule,grade) values(?,?,?,?,?,?,?)";
+         $sql="INSERT INTO `personne`( `nom`, `prenom`, `email`, `role`, `matricule`, `date_naissance`, `id_bourse`, `adresse`, `password`, `type`, `id_chambre`, `tuteur`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
         return $this->dataBase->executeUpdate($sql,$model);
     }
       public  function update(array $model):int{

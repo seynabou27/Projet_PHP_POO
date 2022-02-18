@@ -1,9 +1,20 @@
 <div class="container-fluid">
+  <div>
+     <p class="text"><b>Bienvenue! <br>  Unuversité Cheikh Anta Diop</b></p>
+ 
+    <img src="./../img/groupe2.png" alt="hhhhh">
 
-  <img src="./../img/groupe2.png" alt="hhhhh">
+  </div>
 
   
-  <div class="container mt-5 ">
+  <div class="container">
+  <div class="titr">
+    <p class="titre"> <b> Liste des Etudiants</b></p> 
+
+    <a type="button" class="nav-link  deconnexion" href="<?=WEBROOT."etudiant/showEtudiants1"?>">Ajouter</a>
+
+  </div>
+
   <table class="table">
   <thead>
     <tr>
@@ -49,5 +60,36 @@
         padding: 0;
         width: 1310px;
     }
+    .text{
+      position: absolute;
+      z-index: 2;
+      color: white;
+      font-size: 23px;
+      margin-top: 10%;
+      margin-left: 3%;
+    }
+    .table thead{
+      background-color: #F0F0F0;
+    }
+    .titre{
+      font-size: 20px;
+      padding: 1%;
+      
+      
+    }
+    .titr{
+      padding: 2%;
+    }
+    .deconnexion{
+   
+    border: 1px solid #171D2E;
+    background-color: #171D2E;
+    color: white;
+    border-radius: 3px 3px 3px 3px;
+    width: 124px;
+    float: right;
+    margin-top: -6%;  
+    text-align: center;
+  }
 
 </style>

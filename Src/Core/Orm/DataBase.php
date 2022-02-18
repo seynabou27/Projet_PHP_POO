@@ -69,7 +69,7 @@ class DataBase{
     if(is_null($data)){
       $stm->execute();
     }else{
-      //var_dump($data); die;
+     // var_dump($stm); die;
       $stm->execute(array_values($data));
       
     }
