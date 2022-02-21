@@ -2,12 +2,12 @@
     box-sizing: border-box;
     overflow: hidden;
   } */ 
-  body{
+ /*  body{
 	
     background-color: #171D2E;
     color: white;
     
- } 
+ }  */
 
 
   .titre{
@@ -18,8 +18,9 @@
     margin: 35px;
     padding: auto;
   }
-  .container{
-	  
+  .contenu{
+	  background:#171D2E ;
+	  color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,6 +32,7 @@
       font-size: 12px;
 	  text-align: center;
 	  margin-left: -7%;
+	  
   }
   a{
     color: #FFFFFF;

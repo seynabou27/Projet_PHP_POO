@@ -7,7 +7,7 @@ if(Session::keyExist("errors")){
     Session::removeKey("errors");
 }
 ?>
-    <div class="container">
+    <div class="contenu">
       <div class="titre">
 
         <h2><b>UCAD</b></h2>

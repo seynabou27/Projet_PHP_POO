@@ -3,7 +3,7 @@
 		<a href="#" class="navdrop"></a>
 		<nav>
 			<ul>
-      <a class="navbar" href="<?=WEBROOT."security/showRP"?>"><b>UCAD</b></a>
+      <a class="" href="<?=WEBROOT."security/showRP"?>"><b>UCAD</b></a>
 
       <li><a href="<?=WEBROOT."security/showAccueil"?>">Acceuil</a></li>
 
@@ -35,6 +35,9 @@
 
 					</ul>
 				</li>
+        
+          
+        <a  href="<?=WEBROOT."security/logout"?>" class="button deconnexion">Deconnexion</a>
 			</ul>
 		</nav>
 	</header>
@@ -97,7 +100,7 @@
           <a href="<?=WEBROOT."security/logout"?>" class="button">Deconnexion</a>
         
         
-<!--     <a type="button" class="link  deconnexion" href="<?=WEBROOT."security/logout"?>">Deconnexion</a>
+    <a type="button" class="link  deconnexion" href="<?=WEBROOT."security/logout"?>">Deconnexion</a>
 
 
       </ul>

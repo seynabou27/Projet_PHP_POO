@@ -71,12 +71,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     box-sizing: border-box;
     overflow: hidden;
   } */
-/* line 5, ../sass/connexion/_login.scss */
-body {
-  background-color: #171D2E;
-  color: white;
-}
-
+ /*  body{
+	
+    background-color: #171D2E;
+    color: white;
+    
+ }  */
 /* line 13, ../sass/connexion/_login.scss */
 .titre {
   padding: 30px;
@@ -90,7 +90,9 @@ body {
 }
 
 /* line 21, ../sass/connexion/_login.scss */
-.container {
+.contenu {
+  background: #171D2E;
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -98,7 +100,7 @@ body {
   height: 100vh;
 }
 
-/* line 29, ../sass/connexion/_login.scss */
+/* line 30, ../sass/connexion/_login.scss */
 .texte {
   margin-top: -45px;
   font-size: 12px;
@@ -106,12 +108,12 @@ body {
   margin-left: -7%;
 }
 
-/* line 35, ../sass/connexion/_login.scss */
+/* line 37, ../sass/connexion/_login.scss */
 a {
   color: #FFFFFF;
 }
 
-/* line 39, ../sass/connexion/_login.scss */
+/* line 41, ../sass/connexion/_login.scss */
 .form-style-8 {
   font-family: 'Open Sans Condensed', arial, sans;
   width: 500px;
@@ -120,7 +122,7 @@ a {
   margin: px auto;
 }
 
-/* line 48, ../sass/connexion/_login.scss */
+/* line 50, ../sass/connexion/_login.scss */
 .form-style-8 h2 {
   text-transform: uppercase;
   font-family: '', sans-serif;
@@ -132,7 +134,7 @@ a {
   margin: -30px -30px 30px -30px;
 }
 
-/* line 58, ../sass/connexion/_login.scss */
+/* line 60, ../sass/connexion/_login.scss */
 .form-style-8 input[type="text"],
 .form-style-8 input[type="password"],
 .form-style-8 textarea,
@@ -154,13 +156,13 @@ a {
   height: 45px;
 }
 
-/* line 79, ../sass/connexion/_login.scss */
+/* line 81, ../sass/connexion/_login.scss */
 .form-style-8 textarea {
   resize: none;
   overflow: hidden;
 }
 
-/* line 83, ../sass/connexion/_login.scss */
+/* line 85, ../sass/connexion/_login.scss */
 .form-style-8 button[type="submit"] {
   -moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
   -webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
@@ -178,7 +180,7 @@ a {
   text-decoration: none;
 }
 
-/* line 99, ../sass/connexion/_login.scss */
+/* line 101, ../sass/connexion/_login.scss */
 .form-style-8 button[type="submit"]:hover,
 .form-style-8 button[type="submit"]:hover {
   background: linear-gradient(to bottom, #5f9dff 5%, #5f9dff 100%);
@@ -298,7 +300,7 @@ header {
   width: 100%;
   min-width: 280px;
   height: auto;
-  background: #fff;
+  background: #171D2E;
   margin: 0 auto;
   padding: 0;
 }
@@ -324,24 +326,34 @@ header:after {
 }
 
 /* line 75, ../sass/menu/menu.scss */
+.deconnexion {
+  align-items: center;
+  justify-self: center;
+  float: right;
+  border: 1px solid white;
+  background-color: white;
+  color: #171D2E;
+  border-radius: 3px 3px 3px 3px;
+}
+
+/* line 84, ../sass/menu/menu.scss */
 nav {
   width: 100%;
   /* 630 */
   height: auto;
-  float: right;
   margin: 8px 0 0 0;
   padding: 0 0 20px 0;
   z-index: 100;
   background: transparent;
 }
 @media only screen and (min-width: 860px) and (max-width: 1824px) {
-  /* line 75, ../sass/menu/menu.scss */
+  /* line 84, ../sass/menu/menu.scss */
   nav {
     display: block !important;
   }
 }
 @media only screen and (min-width: 280px) and (max-width: 860px) {
-  /* line 75, ../sass/menu/menu.scss */
+  /* line 84, ../sass/menu/menu.scss */
   nav {
     width: 100%;
     display: none;
@@ -353,7 +365,7 @@ nav {
   }
 }
 @media only screen and (min-width: 280px) and (max-width: 280px) {
-  /* line 75, ../sass/menu/menu.scss */
+  /* line 84, ../sass/menu/menu.scss */
   nav {
     width: 100%;
     height: 35px;
@@ -365,12 +377,12 @@ nav {
     position: relative;
   }
 }
-/* line 106, ../sass/menu/menu.scss */
+/* line 115, ../sass/menu/menu.scss */
 nav ul {
   margin: 0;
   padding: 0;
 }
-/* line 110, ../sass/menu/menu.scss */
+/* line 119, ../sass/menu/menu.scss */
 nav ul li {
   list-style: none;
   display: inline-block;
@@ -378,7 +390,7 @@ nav ul li {
   padding: 3% 0 0 2%;
 }
 @media only screen and (min-width: 280px) and (max-width: 860px) {
-  /* line 110, ../sass/menu/menu.scss */
+  /* line 119, ../sass/menu/menu.scss */
   nav ul li {
     padding: 2% 2% 0 2%;
     width: 100%;
@@ -388,7 +400,7 @@ nav ul li {
   }
 }
 @media only screen and (min-width: 280px) and (max-width: 280px) {
-  /* line 110, ../sass/menu/menu.scss */
+  /* line 119, ../sass/menu/menu.scss */
   nav ul li {
     padding: 2% 2% 0 2%;
     width: 100%;
@@ -397,19 +409,20 @@ nav ul li {
     position: relative;
   }
 }
-/* line 130, ../sass/menu/menu.scss */
+/* line 139, ../sass/menu/menu.scss */
 nav ul li a {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.2em;
+  font-size: 1em;
+  margin-left: 10%;
   font-weight: normal;
   text-decoration: none;
-  color: #1570A6;
+  color: #FFFFFF;
   padding: 0 0 15px 0;
   outline: none;
   letter-spacing: 3px;
 }
 @media only screen and (min-width: 280px) and (max-width: 860px) {
-  /* line 130, ../sass/menu/menu.scss */
+  /* line 139, ../sass/menu/menu.scss */
   nav ul li a {
     font-size: 1.4em;
     color: #fff;
@@ -421,7 +434,7 @@ nav ul li a {
   }
 }
 @media only screen and (min-width: 280px) and (max-width: 280px) {
-  /* line 130, ../sass/menu/menu.scss */
+  /* line 139, ../sass/menu/menu.scss */
   nav ul li a {
     font-size: 1.1em;
     color: #fff;
@@ -433,34 +446,34 @@ nav ul li a {
     text-align: left;
   }
 }
-/* line 159, ../sass/menu/menu.scss */
+/* line 169, ../sass/menu/menu.scss */
 nav ul li a:hover {
   text-decoration: none;
   color: #4B9AC8;
 }
 @media only screen and (min-width: 280px) and (max-width: 860px) {
-  /* line 159, ../sass/menu/menu.scss */
+  /* line 169, ../sass/menu/menu.scss */
   nav ul li a:hover {
     color: #fff;
   }
 }
 @media only screen and (min-width: 280px) and (max-width: 280px) {
-  /* line 159, ../sass/menu/menu.scss */
+  /* line 169, ../sass/menu/menu.scss */
   nav ul li a:hover {
     color: #fff;
   }
 }
-/* line 172, ../sass/menu/menu.scss */
+/* line 182, ../sass/menu/menu.scss */
 nav ul li ul {
   display: none;
 }
 @media only screen and (min-width: 860px) and (max-width: 1824px) {
-  /* line 172, ../sass/menu/menu.scss */
+  /* line 182, ../sass/menu/menu.scss */
   nav ul li ul {
     display: none !important;
   }
 }
-/* line 179, ../sass/menu/menu.scss */
+/* line 189, ../sass/menu/menu.scss */
 nav ul li:hover ul {
   display: block;
   position: absolute;
@@ -472,13 +485,13 @@ nav ul li:hover ul {
   padding: 0 0 1% 0;
 }
 @media only screen and (min-width: 860px) and (max-width: 1824px) {
-  /* line 179, ../sass/menu/menu.scss */
+  /* line 189, ../sass/menu/menu.scss */
   nav ul li:hover ul {
     display: block !important;
   }
 }
 @media only screen and (min-width: 280px) and (max-width: 860px) {
-  /* line 179, ../sass/menu/menu.scss */
+  /* line 189, ../sass/menu/menu.scss */
   nav ul li:hover ul {
     display: none;
     width: 100%;
@@ -489,7 +502,7 @@ nav ul li:hover ul {
   }
 }
 @media only screen and (min-width: 280px) and (max-width: 280px) {
-  /* line 179, ../sass/menu/menu.scss */
+  /* line 189, ../sass/menu/menu.scss */
   nav ul li:hover ul {
     display: none;
     width: 100%;
@@ -500,7 +513,7 @@ nav ul li:hover ul {
     opacity: 1;
   }
 }
-/* line 209, ../sass/menu/menu.scss */
+/* line 219, ../sass/menu/menu.scss */
 nav ul li ul li {
   margin: 0;
   float: none;
@@ -508,7 +521,7 @@ nav ul li ul li {
   text-align: left;
   background-color: #167FBD;
 }
-/* line 216, ../sass/menu/menu.scss */
+/* line 226, ../sass/menu/menu.scss */
 nav ul li ul li a {
   font-size: 0.7em;
   color: #FFF;
@@ -518,7 +531,7 @@ nav ul li ul li a {
   outline: none;
 }
 @media only screen and (min-width: 280px) and (max-width: 860px) {
-  /* line 216, ../sass/menu/menu.scss */
+  /* line 226, ../sass/menu/menu.scss */
   nav ul li ul li a {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
@@ -528,7 +541,7 @@ nav ul li ul li a {
   }
 }
 @media only screen and (min-width: 280px) and (max-width: 280px) {
-  /* line 216, ../sass/menu/menu.scss */
+  /* line 226, ../sass/menu/menu.scss */
   nav ul li ul li a {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
@@ -539,29 +552,29 @@ nav ul li ul li a {
     border: none;
   }
 }
-/* line 240, ../sass/menu/menu.scss */
+/* line 250, ../sass/menu/menu.scss */
 nav ul li ul li a:hover {
   color: #89CAF1;
 }
 @media only screen and (min-width: 280px) and (max-width: 860px) {
-  /* line 240, ../sass/menu/menu.scss */
+  /* line 250, ../sass/menu/menu.scss */
   nav ul li ul li a:hover {
     color: #fff;
   }
 }
 @media only screen and (min-width: 280px) and (max-width: 280px) {
-  /* line 240, ../sass/menu/menu.scss */
+  /* line 250, ../sass/menu/menu.scss */
   nav ul li ul li a:hover {
     color: #fff;
   }
 }
 
-/* line 256, ../sass/menu/menu.scss */
+/* line 266, ../sass/menu/menu.scss */
 .plus:after {
   display: none;
 }
 @media only screen and (min-width: 280px) and (max-width: 860px) {
-  /* line 256, ../sass/menu/menu.scss */
+  /* line 266, ../sass/menu/menu.scss */
   .plus:after {
     display: inline;
     content: "+";
@@ -572,7 +585,7 @@ nav ul li ul li a:hover {
   }
 }
 @media only screen and (min-width: 280px) and (max-width: 280px) {
-  /* line 256, ../sass/menu/menu.scss */
+  /* line 266, ../sass/menu/menu.scss */
   .plus:after {
     display: inline;
     content: "+";
@@ -584,12 +597,12 @@ nav ul li ul li a:hover {
   }
 }
 
-/* line 276, ../sass/menu/menu.scss */
+/* line 286, ../sass/menu/menu.scss */
 .minus:after {
   display: none;
 }
 @media only screen and (min-width: 280px) and (max-width: 860px) {
-  /* line 276, ../sass/menu/menu.scss */
+  /* line 286, ../sass/menu/menu.scss */
   .minus:after {
     display: inline;
     content: "-";
@@ -599,7 +612,7 @@ nav ul li ul li a:hover {
   }
 }
 @media only screen and (min-width: 280px) and (max-width: 280px) {
-  /* line 276, ../sass/menu/menu.scss */
+  /* line 286, ../sass/menu/menu.scss */
   .minus:after {
     display: inline;
     content: "-";
@@ -610,7 +623,7 @@ nav ul li ul li a:hover {
   }
 }
 
-/* line 294, ../sass/menu/menu.scss */
+/* line 304, ../sass/menu/menu.scss */
 a.navdrop:link, a.navdrop:active, a.navdrop:visited {
   font-family: 'icomoon';
   color: #fff;
@@ -636,33 +649,33 @@ a.navdrop:link, a.navdrop:active, a.navdrop:visited {
   -ms-border-radius: 5px;
 }
 @media only screen and (min-width: 280px) and (max-width: 860px) {
-  /* line 294, ../sass/menu/menu.scss */
+  /* line 304, ../sass/menu/menu.scss */
   a.navdrop:link, a.navdrop:active, a.navdrop:visited {
     display: inline;
   }
 }
 @media only screen and (min-width: 280px) and (max-width: 280px) {
-  /* line 294, ../sass/menu/menu.scss */
+  /* line 304, ../sass/menu/menu.scss */
   a.navdrop:link, a.navdrop:active, a.navdrop:visited {
     display: inline;
   }
 }
 
-/* line 318, ../sass/menu/menu.scss */
+/* line 328, ../sass/menu/menu.scss */
 .navdrop:before {
   content: "%";
   font-family: 'icomoon';
   font-weight: normal;
 }
 
-/* line 323, ../sass/menu/menu.scss */
+/* line 333, ../sass/menu/menu.scss */
 .navdrop.close:before {
   content: "&";
   font-family: 'icomoon';
   font-weight: normal;
 }
 
-/* line 328, ../sass/menu/menu.scss */
+/* line 338, ../sass/menu/menu.scss */
 .page-wrap {
   width: 100%;
   /* 960 */
@@ -673,13 +686,13 @@ a.navdrop:link, a.navdrop:active, a.navdrop:visited {
   padding: 0 0 20px 0;
 }
 @media only screen and (min-width: 280px) and (max-width: 280px) {
-  /* line 328, ../sass/menu/menu.scss */
+  /* line 338, ../sass/menu/menu.scss */
   .page-wrap {
     width: 100%;
   }
 }
 
-/* line 339, ../sass/menu/menu.scss */
+/* line 349, ../sass/menu/menu.scss */
 .page-wrap:after {
   content: "";
   display: table;
@@ -908,10 +921,7 @@ a.navdrop:link, a.navdrop:active, a.navdrop:visited {
     padding: 0.5rem 3rem;
   }
    */
-  /* body{
-	 display: flex; 
-    background-color: #171D2E;
-    color: white;
-    text-align: center;
- } 
- */
+/* line 21, ../sass/screen.scss */
+body {
+  background: white;
+}
