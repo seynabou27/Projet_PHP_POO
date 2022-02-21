@@ -1,16 +1,11 @@
-<div class="container-fluid">
-  <div>
-     <p class="text"><b>Bienvenue! <br>  Unuversité Cheikh Anta Diop</b></p>
- 
-    <img src="./../img/groupe2.png" alt="hhhhh">
-
-  </div>
+<div class="container3">
+  
 
 
-  <div class="container  tableau">
+  <div class="container4  tableau">
 
   <div>
-    <p class="titre"> <b> Liste des responsables des Pavillons</b></p>
+    <p class="titre3"> <b> Liste des responsables des Pavillons</b></p>
   </div>
   <table class="table">
   <thead>
@@ -55,12 +50,15 @@
 
 
 
-<style>
-   *{
+<!-- <style>
+    *{
 	box-sizing: border-box;
+} 
+body{
+    overflow-x: hidden;
 }
 
-    .container-fluid {
+    .container3-fluid {
         width: 100%;
         padding-right: 0px;
         padding-left: 0px;
@@ -70,7 +68,7 @@
     .nav {
         color: rgba(255, 255, 255, 0.9);
     }
-    img{
+    .image img{
         margin: 0;
         padding: 0;
         width: 1310px;
@@ -82,7 +80,7 @@
     .tableau{
       padding: 2%;
     }
-    .titre{
+    .titre3{
       font-size: 20px;
     }
     .text{
@@ -96,4 +94,4 @@
    
     
 
-</style>
+</style> -->

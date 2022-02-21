@@ -19,7 +19,7 @@ if(Session::keyExist("errors")){
         </span>
         
       </div>
-      <div class="titre1">
+      <div class="affiche">
         
         <div class="form">
           <div class="form-style-8">
@@ -55,6 +55,7 @@ if(Session::keyExist("errors")){
 
 
 
+    
 
 
 
@@ -75,110 +76,9 @@ if(Session::keyExist("errors")){
 
 
 
-    <style>
-      *{
-    box-sizing: border-box;
-    overflow: hidden;
-  } 
-  body{
-    display: flex;
-    background-color: #171D2E;
-    color: white;
-    text-align: center;
-
-  }
-  .titre{
-    padding: 30px ;
-    font-size: 10px;
-  }
-  .connect{
-    margin: 30px;
-    padding: auto;
-  }
-  .container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  .texte{
-      margin-top: -45px;
-      font-size: 12px;
-  }
-  a{
-    color: #FFFFFF;
-  }
-
-  .form-style-8{
-	font-family: 'Open Sans Condensed', arial, sans;
-	width: 500px;
-	padding: 30px;
-	background: #171D2E;
-	margin: px auto;
-	
-
-}
-.form-style-8 h2{
-	text-transform: uppercase;
-	font-family: '', sans-serif;
-	color: #5F9DFF;
-	font-size: 18px;
-	font-weight: 100;
-	padding: 20px;
-  text-align: center;
-	margin: -30px -30px 30px -30px;
-}
-.form-style-8 input[type="text"],
-.form-style-8 input[type="password"],
-.form-style-8 textarea,
-.form-style-8 select 
-{
-	box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	outline: none;
-	display: block;
-	width: 100%;
-	padding: 7px;
-  color: #707070;
-  border-color: #707070;
-	border: none;
-	border-bottom: 1px solid #ddd;
-	background: transparent;
-	margin-bottom: 10px;
-	font: 16px Arial, Helvetica, sans-serif;
-	height: 45px;
-}
-.form-style-8 textarea{
-	resize:none;
-	overflow: hidden;
-}
-.form-style-8 button[type="submit"]{
-	-moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
-	-webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
-	box-shadow: inset 0px 1px 0px 0px #45D6D6;
-	background-color: #FFFFFF;
-	border: 1px solid #FFFFFF;
-  border-radius: 10px 10px 10px 10px;
-	display: inline-block;
-	cursor: pointer;
-	color: #000000;
-  margin: 65px;
-	font-size: 14px;
-	padding: 8px 18px;
-	text-decoration: none;
-}
-.form-style-8 button[type="submit"]:hover, 
-.form-style-8 button[type="submit"]:hover {
-	background:linear-gradient(to bottom, #5F9DFF 5%, #5F9DFF 100%);
-	background-color:#5F9DFF;
-}
-
-    </style>
 
 
-
+    
 
 
 

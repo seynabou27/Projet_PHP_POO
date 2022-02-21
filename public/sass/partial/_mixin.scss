@@ -1,0 +1,35 @@
+@mixin gradient($position, $color-top, $color-bottom) {
+    background: #35819B;
+      background: -moz-linear-gradient($position, $color-top, $color-bottom);
+      background: -webkit-linear-gradient($position, $color-top, $color-bottom);
+      background: -o-linear-gradient($position, $color-top, $color-bottom);
+      background: -ms-linear-gradient($position, $color-top, $color-bottom);
+  }
+  @mixin border($radius) {
+      border-radius: $radius;
+      -moz-border-radius: $radius;
+      -webkit-border-radius: $radius;
+      -o-border-radius: $radius;
+      -ms-border-radius: $radius;
+  }
+  
+  // media queries
+  $break-small: 280px;
+  $break-middle: 860px;
+  $break-large: 1824px;
+  
+  @mixin respond-to($media) {
+    @if $media == handhelds {
+      @media only screen and (min-width: $break-small) and (max-width: $break-small) { @content; }
+    }
+    @else if $media == tablets {
+    @media only screen and (min-width: $break-small) and (max-width: $break-middle) { @content; }
+    }
+    @else if $media == wide-screens {
+      @media only screen and (min-width: $break-middle) and (max-width: $break-large) { @content; }
+    }
+  }
+
+  ///////////////////////////////////
+
+  

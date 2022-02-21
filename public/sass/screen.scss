@@ -1,0 +1,30 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+@import "compass/css3";
+
+@import "partial/mixin";
+
+@import "connexion/login";
+
+@import "connexion/responsable";
+
+@import "menu/menu";
+
+
+
+
+  /* body{
+	 display: flex; 
+    background-color: #171D2E;
+    color: white;
+    text-align: center;
+ } 
+ */
+
+
+

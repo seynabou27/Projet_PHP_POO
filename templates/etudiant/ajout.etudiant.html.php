@@ -76,15 +76,21 @@ if(Session::keyExist("errors")){
 </div>
 
 <style>
-    .container{
+*{
+    box-sizing: border-box;
+}
+     .container{
         display: flex;
         justify-content: center;
         align-items: center;
-        /* height: 100vh; */
+         height: 100vh; 
         width: 100%;
        
         
     }
+    body{
+        overflow-x: hidden;
+    } 
    /*  button, input, optgroup, select, textarea {
         margin: 9px;
         font-family: inherit;
@@ -159,7 +165,4 @@ input[type=text], input[type=email], input[type=password], input[type=url], inpu
     padding: 2%;
     
 }
-    
-
-
 </style>

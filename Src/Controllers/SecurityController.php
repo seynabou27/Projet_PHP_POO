@@ -52,7 +52,7 @@ class SecurityController extends AbstractController{
             }else{
                
                 Session::setSession(Role::KEY_SESSION_USER, $user);
-                $this->redirect("security/showRp");
+                $this->redirect("security/showAccueil");
             } 
         }else{
                 Session::setSession("errors",$this->validator->getErreurs() );
@@ -111,6 +111,9 @@ class SecurityController extends AbstractController{
     public function showEtudiants(){
         $users=$this->etuRepo->findAll();
         $this->render("etudiant/liste.etudiant.html.php",["users"=>$users]);
+    }
+    public function showAccueil(){
+        $this->render("security/accueil.html.php");
     }
      
    /*  public function voirPavillon(){

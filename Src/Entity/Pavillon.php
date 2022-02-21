@@ -14,7 +14,7 @@ class Pavillon {
     
 
     /**
-     * Get the value of id
+     * Get the value of id_pavillon
      */ 
     public function getIdPavillon()
     {

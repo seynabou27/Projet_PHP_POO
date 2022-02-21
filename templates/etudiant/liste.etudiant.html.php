@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container1">
   <div>
      <p class="text"><b>Bienvenue! <br>  Unuversité Cheikh Anta Diop</b></p>
  
@@ -7,9 +7,9 @@
   </div>
 
   
-  <div class="container">
+  <div class="container1">
   <div class="titr">
-    <p class="titre"> <b> Liste des Etudiants</b></p> 
+    <p class="titre1"> <b> Liste des Etudiants</b></p> 
 
     <a type="button" class="nav-link  deconnexion" href="<?=WEBROOT."etudiant/showEtudiants1"?>">Ajouter</a>
 
@@ -39,13 +39,13 @@
   </div>
 
 </div>
-
 <style>
-   *{
-	box-sizing: border-box;
-}
 
-    .container-fluid {
+/* liste etudiant */
+
+ 
+
+    .container1 {
         width: 100%;
         padding-right: 0px;
         padding-left: 0px;
@@ -71,7 +71,7 @@
     .table thead{
       background-color: #F0F0F0;
     }
-    .titre{
+    .titre1{
       font-size: 20px;
       padding: 1%;
       
@@ -91,5 +91,9 @@
     margin-top: -6%;  
     text-align: center;
   }
+
+
+    
+
 
 </style>

@@ -1,6 +1,9 @@
 <?php
+
 namespace App\Entity;
-class Chambre {
+
+class Chambre
+{
     protected int $id_chambre;
     protected string $num_chambre;
     protected string $num_etage;
@@ -10,16 +13,55 @@ class Chambre {
 
     public function __construct()
     {
-        
     }
     
 
     /**
-     * Get the value of id
+     * Get the value of num_etage
      */ 
-    public function getId()
+    public function getNum_etage()
     {
-        return $this->id;
+        return $this->num_etage;
+    }
+
+    /**
+     * Set the value of num_etage
+     *
+     * @return  self
+     */ 
+    public function setNum_etage($num_etage)
+    {
+        $this->num_etage = $num_etage;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of num_chambre
+     */ 
+    public function getNum_chambre()
+    {
+        return $this->num_chambre;
+    }
+
+    /**
+     * Set the value of num_chambre
+     *
+     * @return  self
+     */ 
+    public function setNum_chambre($num_chambre)
+    {
+        $this->num_chambre = $num_chambre;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of id_chambre
+     */ 
+    public function getId_chambre()
+    {
+        return $this->id_chambre;
     }
 
     /**
@@ -27,52 +69,54 @@ class Chambre {
      *
      * @return  self
      */ 
-    public function setId($id_chambre)
+    public function setId_chambre($id_chambre)
     {
-        $this->id = $id_chambre;
+        $this->id_chambre = $id_chambre;
 
         return $this;
     }
 
     /**
-     * Get the value of numChambre
+     * Get the value of id_type_chambre
      */ 
-    public function getNumChambre()
+    public function getId_type_chambre()
     {
-        return $this->numChambre;
+        return $this->id_type_chambre;
     }
 
     /**
-     * Set the value of numchambre
+     * Set the value of id_type_chambre
      *
      * @return  self
      */ 
-    public function setNumChambre($numChambre)
+    public function setId_type_chambre($id_type_chambre)
     {
-        $this->numChambre = $numChambre;
+        $this->id_type_chambre = $id_type_chambre;
 
         return $this;
     }
 
     /**
-     * Get the value of etage
+     * Get the value of id_pavillon
      */ 
-    public function getEtage()
+    public function getId_pavillon()
     {
-        return $this->NumEtage;
+        return $this->id_pavillon;
     }
 
     /**
-     * Set the value of etage
+     * Set the value of id_pavillon
      *
      * @return  self
      */ 
-    public function setNumEtage($num_etage)
+    public function setId_pavillon($id_pavillon)
     {
-        $this->login = $num_etage;
+        $this->id_pavillon = $id_pavillon;
 
         return $this;
     }
+
+    
 
     public static function  fromArray(object $chambre):array{
       $arr=  array_values((array)$chambre);
@@ -82,3 +126,4 @@ class Chambre {
        return  $arr;
     }
 }
+
