@@ -1,6 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
-
-$font-family: Arial, Helvetica, sans-serif;
+$font-family: Arial, open, sans-serif;
 
 
 * {
@@ -8,6 +8,17 @@ $font-family: Arial, Helvetica, sans-serif;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+@font-face {
+	font-family: 'Material Icons';
+	font-style: normal;
+	font-weight: 400;
+	src: url('https://example.com/MaterialIcons-Regular.eot'); /* For IE6-8 */
+	src: local('Material Icons'),
+	  local('MaterialIcons-Regular'),
+	  url('https://example.com/MaterialIcons-Regular.woff2') format('woff2'),
+	  url('https://example.com/MaterialIcons-Regular.woff') format('woff'),
+	  url('https://example.com/MaterialIcons-Regular.ttf') format('truetype');
+  }
 @font-face {
 	font-family: 'icomoon';
 	src:url('http://www.icutpeople.com/icomoon/fonts/icomoon.eot');
@@ -44,14 +55,14 @@ h1 {
 		content: "Handhelds";
 	}
 }
-p {
-	font-family: $font-family;
-	font-size: 0.9em;
-	color: #000;
-	text-align: center;
-	letter-spacing: 4px;
-	margin-bottom: 15px;
-}
+	/* p {
+		font-family: $font-family;
+		font-size: 0.9em;
+		color: rgb(255, 255, 255);
+		text-align: center;
+		letter-spacing: 4px;
+		margin-bottom: 15px;
+	} */
 header {
 	width: 100%;
 	min-width: 280px;
@@ -72,20 +83,34 @@ header:after {
 	display: table;
 	clear: both;
   }
+  .form-control::placeholder {
+	color: #6c757d;
+	opacity: 1;
+	background-color: #171D2E;
+	background: #314055 0% 0% no-repeat padding-box;
+	height: 46px;
+	border-color: #314055 0% 0% no-repeat padding-box;
+  }
+ .search{
+  margin-left: 60%;
+  
+  
+} 
 .deconnexion{
-    align-items: center;
-    justify-self: center;
+    border-width: 23%;
     float: right;
-    border: 1px solid white;
+    border: 11px solid white;
     background-color: white;
     color: #171D2E;
     border-radius: 3px 3px 3px 3px;
+	margin-top: 3%;
+	margin-right: 4%;
   }
 nav {
 	width: 100%; /* 630 */
 	height: auto;
 	
-	margin: 8px 0 0 0;
+	margin: 0px 0 0 0;
     padding: 0 0 20px 0;
 	z-index: 100;
 	background: transparent;
@@ -221,11 +246,11 @@ nav {
 	    	float: none; 
 	        display: block;
 	        text-align: left;
-	        background-color: #167FBD;
+	        background-color: #ffffff;
 
         a {
         	font-size: 0.7em;
-			color: #FFF;
+			color: rgb(0, 0, 0);
 			outline: none;
 			text-align: left;
 			padding: 4% 4%;

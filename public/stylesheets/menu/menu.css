@@ -1,23 +1,23 @@
 /*
 Error: Undefined mixin 'respond-to'.
-        on line 40 of /home/seynabou/Bureau/Projet_POO/public/sass/menu/menu.scss, in `respond-to'
-        from line 40 of /home/seynabou/Bureau/Projet_POO/public/sass/menu/menu.scss
+        on line 51 of /home/seynabou/Bureau/Projet_POO/public/sass/menu/menu.scss, in `respond-to'
+        from line 51 of /home/seynabou/Bureau/Projet_POO/public/sass/menu/menu.scss
 
-35: 	font-family: $font-family;
-36: 	font-size: 1.4em;
-37: 	color: #000;
-38: 	text-align: center;
-39: 	letter-spacing: 2px;
-40: 	@include respond-to(tablets) {
-41: 		content: "Tablets";
-42: 	}
-43: 	@include respond-to(handhelds) {
-44: 		content: "Handhelds";
-45: 	}
+46: 	font-family: $font-family;
+47: 	font-size: 1.4em;
+48: 	color: #000;
+49: 	text-align: center;
+50: 	
+51: 	@include respond-to(tablets) {
+52: 		content: "Tablets";
+53: 	}
+54: 	@include respond-to(handhelds) {
+55: 		content: "Handhelds";
+56: 	}
 
 Backtrace:
-/home/seynabou/Bureau/Projet_POO/public/sass/menu/menu.scss:40:in `respond-to'
-/home/seynabou/Bureau/Projet_POO/public/sass/menu/menu.scss:40
+/home/seynabou/Bureau/Projet_POO/public/sass/menu/menu.scss:51:in `respond-to'
+/home/seynabou/Bureau/Projet_POO/public/sass/menu/menu.scss:51
 /var/lib/gems/2.7.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:352:in `block in visit_mixin'
 /var/lib/gems/2.7.0/gems/sass-3.4.25/lib/sass/stack.rb:98:in `block in with_mixin'
 /var/lib/gems/2.7.0/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
@@ -72,4 +72,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'respond-to'.\A         on line 40 of /home/seynabou/Bureau/Projet_POO/public/sass/menu/menu.scss, in `respond-to'\A         from line 40 of /home/seynabou/Bureau/Projet_POO/public/sass/menu/menu.scss\A \A 35: 	font-family: $font-family;\A 36: 	font-size: 1.4em;\A 37: 	color: #000;\A 38: 	text-align: center;\A 39: 	letter-spacing: 2px;\A 40: 	@include respond-to(tablets) {\A 41: 		content: \"Tablets\";\A 42: 	}\A 43: 	@include respond-to(handhelds) {\A 44: 		content: \"Handhelds\";\A 45: 	}"; }
+  content: "Error: Undefined mixin 'respond-to'.\A         on line 51 of /home/seynabou/Bureau/Projet_POO/public/sass/menu/menu.scss, in `respond-to'\A         from line 51 of /home/seynabou/Bureau/Projet_POO/public/sass/menu/menu.scss\A \A 46: 	font-family: $font-family;\A 47: 	font-size: 1.4em;\A 48: 	color: #000;\A 49: 	text-align: center;\A 50: 	\A 51: 	@include respond-to(tablets) {\A 52: 		content: \"Tablets\";\A 53: 	}\A 54: 	@include respond-to(handhelds) {\A 55: 		content: \"Handhelds\";\A 56: 	}"; }

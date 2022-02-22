@@ -34,12 +34,12 @@ class ChambreController extends AbstractController{
    
     public function voirChambre(){
         $pav=$this->pavillon->findAll_pavillon();
-        $this->render("chambre/liste.chambre.html.php",["pav"=>$pav]);
+        $this->render("chambre/ajout.chambre.html.php",["pav"=>$pav]);
     }
 
     public function showChambre1(){
         $pav=$this->pavillon->findAll_pavillon1();
-        $this->render("chambre/ajout.chambre.html.php",["pav"=>$pav]);
+        $this->render("chambre/liste.chambre.html.php",["pav"=>$pav]);
     }
     
 

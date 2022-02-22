@@ -1,4 +1,156 @@
-<?php
+ <div class="groupe3">
+    <div class="outline">
+       <a class="text12" href="<?=WEBROOT."etudiant/showEtudiants"?>"> <img  src="./../img/outline.png" alt="hhhh">Retour vers Etudiant</a>
+
+    </div>    
+    <h3 class="text"><b>Ajout étudiants</b></h3>
+     <p class="text11"> Voici la liste des etudiants <br> </p>
+  
+<!--      <img src="./../img/goupe3.svg" alt="hhhhh">
+ --> 
+</div> 
+<div class="principale">
+    <p class="annonce">Pour ajouter un nouveau etudiant, veuillez remplir <br> <br> le formulaire ci-dessous</p>
+    <form class=form action="" method="post">
+
+   <div class="form1">
+       <div class="row">
+           <div class="form-controle">
+                <label for="nom"></label>
+                <input type="text" placeholder="Nom">
+                <small>Error message</small>
+           </div>
+
+           <div class="form-controle">
+
+            <label for="prenom"></label>
+            <input type="text" placeholder="Prenom"><small>Error message</small>
+            </div>
+   
+
+        </div>
+       <div class="row ">
+            <div class="form-controle">
+                <label for="email"></label>
+                <input class="email" type="text" name="login" placeholder="Email">
+                <small>Error message</small>
+        
+            </div>
+       </div>
+   
+    <div class="row">
+        <div class="form-controle">
+            <label for="telephone"></label>
+            <input type="text" name="tele" placeholder="Téléphone">
+            <small>Error Message</small>
+
+        </div>
+        <div class="form-controle">
+            <label for="tuteur"></label>
+            <input type="text" name="tuteur" placeholder="Tuteur">
+            <small>Error message</small>
+        </div>
+    </div>
+  
+    <div class="form-controle">
+        <label for="type"></label>
+        <select  class="select" name="type" id="">
+            <option value="Boursier">Boursier</option>
+            <option value="Non Bourssier">Non Boursier</option>
+            
+        </select>        
+    </div>
+   
+
+
+    <div class="tt">
+        <div class="a">
+            <a type="button" class="nav-link annuler  " href="<?=WEBROOT."etudiant/showEtudiants"?>">Annuler</a>
+
+        </div>
+        <div class="aa">
+            <a type="button" class="nav-link  ajouter" href="#">Ajouter</a>
+
+        </div>
+
+    </div>
+    <br> <br> <br>
+
+    </form>
+    
+</div>
+
+
+<!-- <div class="row">
+                 <div class="form-controle">
+                    <label for="username">Nom</label>
+                    <input type="text" id="username" name="nom" placeholder="Enter votre nom">
+                    <small class="form-text text-danger form">
+                    <?php echo isset($arrErrors['nom']) ? $arrErrors['nom']: '';?> 
+                    </small>
+                    </div>
+                    <div class="form-controle">
+                         <label for="">Prenom</label>
+                         <input type="text" id="email" name="prenom" placeholder="Enter votre prenom">
+                    </div>
+               </div>
+               
+               <div class="row">
+                    <div class="form-controle">
+                         <label for="">login</label>
+                         <input type="text" name="login" placeholder="Enter votre login">
+                    </div>
+                    <div class="form-controle">
+                         <label for="password2">date de naissane</label>
+                         <input type="date" id="password2" name="date" placeholder="Entrer votre date de naissance">
+                    </div>
+               </div>
+               <div class="row">
+                    <div class="form-controle">
+                         <label for="password2">Telephone</label>
+                         <input type="text" id="password2" name="telephone" placeholder="Entrer votre telephone">
+                    </div>
+                    <div class="form-controle">
+                         <label for="password2">Adresse</label>
+                         <input type="text" id="password2" name="adresse" placeholder="Entrer votre adresse">
+                    </div>
+               </div>
+            <button type="submit" class="btn">Ajouter</button>
+        </form>
+    </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <?php
 
 use App\Core\Session;
 $arrErrors=[];
@@ -7,7 +159,13 @@ if(Session::keyExist("errors")){
     Session::removeKey("errors");
 }
 ?>
+<div>
+    <h3 class="text"><b>Ajouter un Etudiant</b></h3>
+     <p class="text"> Voici la liste des etudiants <br> </p>
+  
+    <img src="./../img/goupe3.svg" alt="hhhhh">
 
+  </div>
 <div class="ajout">
         <h3 ><b>Ajouter un Etudiant</b></h3> 
     </div>
@@ -56,7 +214,7 @@ if(Session::keyExist("errors")){
                 <!-- <input class="num" type="text" name="tele" id="" placeholder="Telephone">
                 <?php if(isset($arrErrors['tele'])): ?>
                     <small id=""  class="form-text text-danger"><?=$arrErrors['tele']?></small>
-                <?php endif ?> -->
+                <?php endif ?> 
 
 
             </div>
@@ -91,7 +249,7 @@ if(Session::keyExist("errors")){
     body{
         overflow-x: hidden;
     } 
-   /*  button, input, optgroup, select, textarea {
+    button, input, optgroup, select, textarea {
         margin: 9px;
         font-family: inherit;
         font-size: inherit;
@@ -100,7 +258,7 @@ if(Session::keyExist("errors")){
         padding: 1%;
         border-radius: 2px 2px 2px 2px;
         
-    } */
+    } 
 
 
 body, button, input, select, textarea, blockquote p, .entry-meta, .more-link, dl, .previous a, .next a, .nav-previous a, .nav-next a, #respond h3#reply-title #cancel-comment-reply-link, #respond form input[type="text"], #respond form textarea, #secondary .widget, .error-404 .widget {
@@ -165,4 +323,4 @@ input[type=text], input[type=email], input[type=password], input[type=url], inpu
     padding: 2%;
     
 }
-</style>
+</style> -->

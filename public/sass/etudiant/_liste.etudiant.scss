@@ -1,0 +1,268 @@
+/* .contenu2 {
+    
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+} */
+.nav {
+    color: rgba(255, 255, 255, 0.9);
+}
+.groupe3{
+    background-color: #233248;
+    width: auto;
+    height: 140px;
+}
+/* .groupe3 img {
+    margin: 0;
+    padding: 0;
+    width: 1298px;
+  } */
+.table {
+   align-items: center;
+   justify-content: center;
+    margin-bottom: 1rem;
+    background-color: transparent;
+  }
+  .text12{
+    position: absolute;
+    z-index: 2;
+    color: white;
+    font-size: 15px;
+    margin-top: 1%;
+    margin-left: 3%;
+  }
+  .outline img{
+    position: absolute;
+    z-index: 2;
+    width: 23px;
+    margin-top: -3%;
+    margin-left: -22px;
+  }
+.text{
+  position: absolute;
+  z-index: 2;
+  color: white;
+  font-size: 23px;
+  margin-top: 5%;
+  margin-left: 3%;
+}
+.text11{
+    position: absolute;
+    z-index: 2;
+    color: white;
+    font-size: 15px;
+    margin-top: 8%;
+    margin-left: 3%;
+  }
+.table thead{
+  background-color: #F0F0F0;
+}
+ .etud{
+  font-size: 20px;
+  padding: 1%;
+  color: #171D2E;
+  margin-left: 2%;
+  
+} 
+ p .etu {
+    font-family: Arial, open, sans-serif;
+    font-size: 0.9em;
+    color: white;
+    text-align: center;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+  }
+.titr{
+  padding: 2%;
+}
+  .ajout{
+
+border: 1px solid #171D2E;
+background-color: #171D2E;
+color: white;
+border-radius: 3px 3px 3px 3px;
+width: 124px;
+float: right;
+margin-top: -3%;  
+text-align: center;
+}  
+.filtre{
+
+    border: 1px solid #171D2E;
+    background-color: white;
+    color: #171D2E;
+    border-radius: 3px 3px 3px 3px;
+    width: 124px;
+    float: right;
+    margin-top: -3%;  
+    text-align: center;
+    margin-right: 12%;
+}  
+.modif{
+    border: 8px solid #171D2E;
+    background-color: #171D2E;
+    color: white;
+    border-radius: 3px 3px 3px 3px;
+   
+
+}
+.filt{
+    border: 1px solid #171D2E;
+    background-color: white;
+    color: #171D2E;
+    border-radius: 3px 3px 3px 3px;
+    height: 36px;
+    width: 32%;
+
+}
+
+//////////////////////:ajout etudiant/////////////////
+
+.annonce{
+    padding: 2%;
+    margin-left: 2%;
+    
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+:root{
+    --sucess-color:#2ecc71;
+    --error-color:#e74c3c;
+}
+
+/* body{
+    background-color: #f9fafb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'open sans',sans-serif;
+} */
+/* .container2{
+    margin-left: auto;
+    margin-right: auto;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      width: 70%;
+      margin-top: 5%;
+      height: 600PX;
+  } */
+  
+  h2{
+      text-align: center;
+      margin: 0 0 20px;
+  }
+  
+  .form{
+    padding: 0px 44px;
+  
+  }
+  
+  
+  .form-controle{
+      margin-bottom: 10px;
+      padding-bottom: 20px;
+      position: relative;
+  }
+  
+  .form-controle label{
+      color: #777;
+      display: block;
+      margin-bottom: 5px;
+      margin-left: 21px;
+  
+  }
+  .form-controle .email{
+      width: 818px;
+  }
+  .select{
+    width: 819px;
+    margin-left: 6px; 
+    padding: 13px; 
+}
+.form-controle select:focus{
+    outline: 0;
+    border-color: rgb(255, 255, 255);
+    background-color: white;
+}
+  .form-controle input{
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    width: 400px;
+    padding: 13px;
+    font-size: 14px;
+    margin-left: 21px;
+  }
+  
+  .form-controle input:focus{
+      outline: 0;
+      border-color: #777;
+  }
+  
+  .form-controle.success input{
+      border-color: var(--success-color);
+  }
+  
+  .form-controle.error input{
+      border-color: var(--error-color);
+  }
+  
+  .form-controle small{
+      color: var(--error-color);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      visibility: hidden;
+  }
+  
+  .form-controle.error small{
+      visibility: visible;
+  }
+  
+  .form button{
+      cursor: pointer;
+      background-color: #3498db;
+      border: 2px solid #3498db;
+      border-radius: 4px;
+      color: #fff;
+      display: block;
+      font-size: 16px;
+      padding: 10px;
+      margin-top: 20px;
+      width: 50%;
+    }
+    .ajouter{
+        border: 3px solid #171D2E;
+        background-color: #171D2E;
+        color: white;
+        border-radius: 3px 3px 3px 3px;
+    
+    }
+    .tt {
+        display: flex;
+        float: right;
+        margin-right: 35%;
+    }
+    .a{
+        margin-right: 11%;
+    }
+ .annuler{
+        border: 1px solid #171D2E;
+        background-color: white;
+        color: #171D2E;
+        border-radius: 3px 3px 3px 3px;
+         height: 38px;
+/*         text-align: center;*/
+        
+    
+    } 
+    .nav-link {
+        display: block;
+        padding: 0.5rem 2rem;
+        text-align: center;
+      }

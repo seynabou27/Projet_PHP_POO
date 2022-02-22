@@ -3,7 +3,9 @@
 		<a href="#" class="navdrop"></a>
 		<nav>
 			<ul>
-      <a class="" href="<?=WEBROOT."security/showRP"?>"><b>UCAD</b></a>
+    <span class="material-icons-outlined">
+
+</span><a class="" href="<?=WEBROOT."security/showRP"?>"><b>UCAD</b></a>
 
       <li><a href="<?=WEBROOT."security/showAccueil"?>">Acceuil</a></li>
 
@@ -27,16 +29,21 @@
 
 					</ul>
 				</li>
- 				<li><a href="#" class="plus">Contact</a>
+ 				<li><a href="#" class="plus">Etudiants</a>
 					<ul>
             <li><a href="#">Ajout Etudiant non Bourssier</a></li>
             <li><a href="#">Ajout Etudiant Bourssier</a></li>
             <li><a href="<?=WEBROOT."etudiant/showEtudiants"?>">Liste Etudiant</a></li>
 
 					</ul>
+         
 				</li>
-        
-          
+        <li>
+        <form class="form-inline search">
+            <input class="form-control" type="search" placeholder="Que recherchez-vous?" aria-label="Search">
+          </form>
+        </li>
+           
         <a  href="<?=WEBROOT."security/logout"?>" class="button deconnexion">Deconnexion</a>
 			</ul>
 		</nav>

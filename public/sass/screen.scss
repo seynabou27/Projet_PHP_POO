@@ -15,14 +15,17 @@
 
 @import "menu/menu";
 
+@import "etudiant/liste.etudiant";
 
 
 
+*{
+  box-sizing: border-box;
+ 
+}
   body{
       
     background: white;
-   
-  
  } 
 
 
