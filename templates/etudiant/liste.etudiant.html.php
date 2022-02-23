@@ -13,7 +13,7 @@
     <p class="etud"> <b> Liste des Etudiants</b></p> 
     <a type="button" class="nav-link  filtre" href="#">Filtre</a>
 
-    <a type="button" class="nav-link  ajout" href="<?=WEBROOT."etudiant/showEtudiants1"?>">Ajouter</a>
+    <a type="button" class="nav-link  ajout" href="<?=WEBROOT."etudiant/showEtudiants1"?>"><i class="fas fa-plus "></i>Ajouter</a>
 
   </div>
 

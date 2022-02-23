@@ -5,11 +5,13 @@ use App\Core\Request;
 use App\Core\AbstractController;
 use App\Core\Role;
 use App\Core\Session;
+use App\Entity\Bourse;
+use App\Repository\BourseRepository;
 use App\Repository\EtudiantRepository;
 use App\Repository\PersonneRepository;
 
 class EtudiantController extends AbstractController{
-
+    private BourseRepository $bourseRepo;
     private PersonneRepository $persRepo;
     private EtudiantRepository $etuRepo;
     private Request $request;
@@ -19,6 +21,7 @@ class EtudiantController extends AbstractController{
           $this->persRepo=new PersonneRepository;
           $this->etuRepo=new EtudiantRepository;
           $this->request=new Request;
+          $this->bourseRepo = new BourseRepository;
     }
     public function login(){
           $this->layout="layout.connexion";
@@ -32,8 +35,9 @@ class EtudiantController extends AbstractController{
   
   public function showEtudiants1(){
       $users=$this->etuRepo->insert();
-      /* die('gtuhuh'); */
-      $this->render("etudiant/ajout.etudiant.html.php",["users"=>$users]);
+      $bourse = $this->bourseRepo->findAll();
+     // var_dump($bourse); die;
+      $this->render("etudiant/ajout.etudiant.html.php",["users"=>$users,'bourses'=>$bourse]);
   }   
 }
 

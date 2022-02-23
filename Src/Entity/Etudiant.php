@@ -9,6 +9,7 @@ class Etudiant extends Personne implements EntityInterface{
     private string $tuteur;
     private string $date;
     private int $telephone;
+    private string $adresse;
    //Propriete Navigationnelle OneToMany
    //Collection
  ///  private ArrayCollection $inscriptions;
@@ -80,25 +81,29 @@ class Etudiant extends Personne implements EntityInterface{
 
 public static function  fromArray(object $personne):array{
     $arr=  array_values((array)$personne);
-    $arr[]=$arr[0];
+     $arr[]=$arr[0];
     $arr[]=$arr[1];
     $arr[]=$arr[2];
     $arr[]=$arr[3];
     $arr[]=$arr[4];
     $arr[]=$arr[6];
+    $arr[]=$arr[9]->getId();
+    $arr[]=$arr[8];
     $arr[]=null;
-    $arr[]="";
-    $arr[]="";
-    $arr[]="";
+    $arr[]=null;
     $arr[]=null;
     $arr[]=$arr[5];
+    $arr[]=$arr[7];
     unset($arr[0]);
     unset($arr[1]);
     unset($arr[2]);
     unset($arr[3]);
     unset($arr[4]);
     unset($arr[5]);
-    unset($arr[6]);
+    unset($arr[6]); 
+    unset($arr[7]);
+    unset($arr[8]); 
+    unset($arr[9]); 
     
      return  array_values($arr);
   }
@@ -163,6 +168,28 @@ public static function  fromArray(object $personne):array{
     public function setTelephone($telephone)
     {
         $this->telephone = $telephone;
+
+        return $this;
+    }
+
+   
+
+    /**
+     * Get the value of adresse
+     */ 
+    public function getAdresse()
+    {
+        return $this->adresse;
+    }
+
+    /**
+     * Set the value of adresse
+     *
+     * @return  self
+     */ 
+    public function setAdresse($adresse)
+    {
+        $this->adresse = $adresse;
 
         return $this;
     }

@@ -1,16 +1,18 @@
 <?php 
 namespace App\Controllers;
 
-use App\Core\Request;
-use App\Core\AbstractController;
 use App\Core\Role;
+use App\Core\Request;
 use App\Core\Session;
+use App\Entity\Bourse;
 use App\Entity\Etudiant;
+use App\Core\AbstractController;
+use App\Entity\EtudiantBourssier;
 use App\Manager\PersonneManager;
+use App\Repository\RPRepository;
 use App\Repository\EtudiantRepository;
 use App\Repository\PavillonRepository;
 use App\Repository\PersonneRepository;
-use App\Repository\RPRepository;
 
 class SecurityController extends AbstractController{
 
@@ -71,15 +73,20 @@ class SecurityController extends AbstractController{
            $this->validator->isVide($matri,"matri");
            $this->validator->isVide($nom,"nom");
            $this->validator->isVide($prenom,"prenom");
-           $this->validator->isVide($date,"date");
+            $this->validator->isVide($date,"date");
            $this->validator->isVide($tuteur,"tuteur");
-           if($this->validator->valid()){
+            $this->validator->isVide($telephone,"tele");
+            $this->validator->isVide($adresse,"adresse");
+
+            if($this->validator->valid()){
            //  $user= $this->persRepo->findEtudiantByInscription($login,$password,$nom,$prenom,$date,$tele,$matri);
             // creer un objet type etudiant
             // modifier les valeurs
             //from :: transformer objet en tableau
             //
-            $etu=new Etudiant;
+            $bourse = new Bourse;
+            $bourse->setId($id_bourse);
+            $etu=new EtudiantBourssier;
             $personne=new PersonneManager;
             $etu->setNom($nom)
                 ->setPrenom($prenom);
@@ -87,7 +94,12 @@ class SecurityController extends AbstractController{
             $etu->setMatricule($matri)
                 ->setTuteur($tuteur);
             $etu->setDate($date);
+            $etu->setTelephone($telephone);
+            $etu->setId_bourse($bourse);
+            $etu->setAdresse($adresse);
             $insert= Etudiant::fromArray($etu); 
+            /*  var_dump($insert);
+            die();  */ 
             $personne->insert($insert);
 
             }else{
@@ -96,6 +108,7 @@ class SecurityController extends AbstractController{
             }
             $this->redirect("etudiant/showEtudiants");
         }
+        
          $this->render("etudiant/ajout.etudiant.html.php");
      }
 

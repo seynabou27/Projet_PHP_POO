@@ -48,7 +48,6 @@
     background: -moz-linear-gradient(left,#f4524d  0%,#5543ca 100%) !important;
     background: -webkit-linear-gradient(left,#f4524d  0%,#5543ca 100%) !important;
     background: linear-gradient(to right,#f4524d  0%,#5543ca  100%) !important;
-    -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
 }
 
@@ -105,6 +104,21 @@
 
 
 </style>
+
+
+
+
+
+
+ <!-- <div class="form-controle">
+        <label for="type"></label>
+        <select  class="select" name="id_bourse" id="">
+            <option value="">chosir</option>
+            <?php foreach($bourses as $brs): ?>
+                <option value="<?=$brs->id_bourse?>"><?=$brs->type_bourse?></option>
+            <?php endforeach; ?>
+        </select>        
+    </div> -->
 
 
 <div class="container">
