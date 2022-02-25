@@ -1339,12 +1339,66 @@ h2 {
   border-radius: 3px 3px 3px 3px;
 }
 
-/* line 25, ../sass/screen.scss */
+/* line 47, ../sass/chambre/_chambre.scss */
+.select1 {
+  width: 819px;
+  margin-left: 23px;
+  padding: 13px;
+}
+
+/* line 1, ../sass/pavillon/_pavillon.scss */
 * {
   box-sizing: border-box;
 }
 
-/* line 29, ../sass/screen.scss */
+/* line 7, ../sass/pavillon/_pavillon.scss */
+.pav {
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+}
+
+/* line 15, ../sass/pavillon/_pavillon.scss */
+.ajo {
+  border: 1px solid #171D2E;
+  background-color: #171D2E;
+  color: white;
+  border-radius: 3px 3px 3px 3px;
+}
+
+/* line 23, ../sass/pavillon/_pavillon.scss */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* line 31, ../sass/pavillon/_pavillon.scss */
+.fil {
+  border: 1px solid #171D2E;
+  background-color: white;
+  color: #171D2E;
+  border-radius: 3px 3px 3px 3px;
+  height: 41px;
+  margin-top: 9px;
+}
+
+/* line 41, ../sass/pavillon/_pavillon.scss */
+.pav1 {
+  margin-top: 19px;
+  font-size: 21px;
+}
+
+/* line 45, ../sass/pavillon/_pavillon.scss */
+.pav2 {
+  display: flex;
+}
+
+/* line 28, ../sass/screen.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 32, ../sass/screen.scss */
 body {
   background: white;
 }

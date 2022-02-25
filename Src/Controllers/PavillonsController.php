@@ -33,13 +33,15 @@ class PavillonsController extends AbstractController{
 
    
     public function voirPavillon(){
-        $pav=$this->pavillon->findAll_pavillon();
-/*         die('gtuhuh');
- */        $this->render("pavillon/ajout.pavillon.html.php",["pav"=>$pav]);
+        $pav=$this->pavillon->findAll();
+        
+         $this->render("pavillon/ajout.pavillon.html.php",["pav"=>$pav]);
     }
 
     public function showPavillon1(){
-        $pav=$this->pavillon->findAll_pavillon1();
+        $pav=$this->pavillon->findAll();
+        /* var_dump($pav);
+        die('gtuhuh'); */
         $this->render("pavillon/liste.pavillon.html.php",["pav"=>$pav]);
     }
     

@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+    
+}
+
+
+.pav{
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+    
+}
+
+
+.ajo{
+
+    border: 1px solid #171D2E;
+    background-color: #171D2E;
+    color: white;
+    border-radius: 3px 3px 3px 3px;
+ 
+}
+.row {
+    
+    display: flex;
+    
+    flex-wrap: wrap;
+   
+  }  
+
+.fil{
+
+    border: 1px solid #171D2E;
+    background-color: white;
+    color: #171D2E;
+    border-radius: 3px 3px 3px 3px;
+    height: 41px;
+    margin-top: 9px;
+    
+} 
+.pav1{
+    margin-top: 19px;
+    font-size: 21px;
+}
+.pav2{
+    display: flex;
+}

@@ -12,7 +12,7 @@ class PavillonRepository extends AbstractRepository{
         $this->primaryKey="id_pavillon";
     }
    
-     function findAll_pavillon():array{
+     function findAll():array{
          $sql="select * from $this->tableName ";
           return $this->dataBase->executeSelect($sql);
       }
