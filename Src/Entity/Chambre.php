@@ -2,8 +2,8 @@
 
 namespace App\Entity;
 
-class Chambre
-{
+class Chambre{
+
     protected int $id_chambre;
     protected string $num_chambre;
     protected string $num_etage;
@@ -11,27 +11,39 @@ class Chambre
     protected string $id_pavillon;
 
 
-    public function __construct()
-    {
+    public function __construct(){
+        
     }
     
 
-    /**
-     * Get the value of num_etage
-     */ 
-    public function getNum_etage()
-    {
-        return $this->num_etage;
+    
+
+    
+
+    public static function  fromArray(object $chambre):array{
+      $arr=  array_values((array)$chambre);
+       $arr[]="";
+       $arr[]="";
+       $arr[]="";
+       return  $arr;
     }
 
     /**
-     * Set the value of num_etage
+     * Get the value of id_chambre
+     */ 
+    public function getId_chambre()
+    {
+        return $this->id_chambre;
+    }
+
+    /**
+     * Set the value of id_chambre
      *
      * @return  self
      */ 
-    public function setNum_etage($num_etage)
+    public function setId_chambre($id_chambre)
     {
-        $this->num_etage = $num_etage;
+        $this->id_chambre = $id_chambre;
 
         return $this;
     }
@@ -57,21 +69,21 @@ class Chambre
     }
 
     /**
-     * Get the value of id_chambre
+     * Get the value of num_etage
      */ 
-    public function getId_chambre()
+    public function getNum_etage()
     {
-        return $this->id_chambre;
+        return $this->num_etage;
     }
 
     /**
-     * Set the value of id_chambre
+     * Set the value of num_etage
      *
      * @return  self
      */ 
-    public function setId_chambre($id_chambre)
+    public function setNum_etage($num_etage)
     {
-        $this->id_chambre = $id_chambre;
+        $this->num_etage = $num_etage;
 
         return $this;
     }
@@ -114,16 +126,6 @@ class Chambre
         $this->id_pavillon = $id_pavillon;
 
         return $this;
-    }
-
-    
-
-    public static function  fromArray(object $chambre):array{
-      $arr=  array_values((array)$chambre);
-       $arr[]="";
-       $arr[]="";
-       $arr[]="";
-       return  $arr;
     }
 }
 

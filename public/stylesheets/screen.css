@@ -1300,12 +1300,51 @@ h2 {
   text-align: center;
 }
 
-/* line 22, ../sass/screen.scss */
+/* line 2, ../sass/chambre/_chambre.scss */
 * {
   box-sizing: border-box;
 }
 
-/* line 26, ../sass/screen.scss */
+/* line 5, ../sass/chambre/_chambre.scss */
+.centre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 11, ../sass/chambre/_chambre.scss */
+.chambre {
+  display: flex;
+  padding: 3%;
+}
+
+/* line 20, ../sass/chambre/_chambre.scss */
+.chambre > p {
+  font-size: 21px;
+}
+
+/* line 24, ../sass/chambre/_chambre.scss */
+.ajou {
+  border: 1px solid #171D2E;
+  background-color: #171D2E;
+  color: white;
+  border-radius: 3px 3px 3px 3px;
+}
+
+/* line 36, ../sass/chambre/_chambre.scss */
+.filtr {
+  border: 1px solid #171D2E;
+  background-color: white;
+  color: #171D2E;
+  border-radius: 3px 3px 3px 3px;
+}
+
+/* line 25, ../sass/screen.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 29, ../sass/screen.scss */
 body {
   background: white;
 }

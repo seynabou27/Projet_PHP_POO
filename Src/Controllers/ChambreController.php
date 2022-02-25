@@ -15,6 +15,7 @@ class ChambreController extends AbstractController{
     private EtudiantRepository $etuRepo;
     private PavillonRepository $pavillon;
 
+
     private Request $request;
 
     public function __construct(){
@@ -25,6 +26,7 @@ class ChambreController extends AbstractController{
           $this->pavillon=new PavillonRepository;
 
 
+
     }
     
 
@@ -33,8 +35,8 @@ class ChambreController extends AbstractController{
 
    
     public function voirChambre(){
-        $pav=$this->pavillon->findAll_pavillon();
-        $this->render("chambre/ajout.chambre.html.php",["pav"=>$pav]);
+        $chambre=$this->pavillon->findAll();
+        $this->render("chambre/ajout.chambre.html.php",["chambre"=>$chambre]);
     }
 
     public function showChambre1(){

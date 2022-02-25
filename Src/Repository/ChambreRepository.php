@@ -8,8 +8,8 @@ class ChambreRepository extends AbstractRepository{
     public function __construct()
     {
         parent::__construct();
-        $this->tableName="chambre";
         $this->primaryKey="id_chambre";
+        $this->tableName="chambre";
     }
    
      function findAll_chambre():array{
@@ -18,7 +18,7 @@ class ChambreRepository extends AbstractRepository{
       }
 
      
-      function findPavillon(string $num):object|bool{
+      function findChambre(string $num):object|bool{
         $sql="select * from $this->tableName where num_chambre=? and num_etage=?";
         return $this->findBy($sql,[$num],true);
 

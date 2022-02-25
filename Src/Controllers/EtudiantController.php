@@ -36,8 +36,8 @@ class EtudiantController extends AbstractController{
   public function showEtudiants1(){
       $users=$this->etuRepo->insert();
       $bourse = $this->bourseRepo->findAll();
-     // var_dump($bourse); die;
-      $this->render("etudiant/ajout.etudiant.html.php",["users"=>$users,'bourses'=>$bourse]);
+/*       var_dump($bourse); die;
+ */      $this->render("etudiant/ajout.etudiant.html.php",["users"=>$users,'bourses'=>$bourse]);
   }   
 }
 

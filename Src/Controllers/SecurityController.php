@@ -76,8 +76,8 @@ class SecurityController extends AbstractController{
             $this->validator->isVide($date,"date");
            $this->validator->isVide($tuteur,"tuteur");
             $this->validator->isVide($telephone,"tele");
-            $this->validator->isVide($adresse,"adresse");
-
+/*             $this->validator->isVide($adresse,"adresse");
+ */
             if($this->validator->valid()){
            //  $user= $this->persRepo->findEtudiantByInscription($login,$password,$nom,$prenom,$date,$tele,$matri);
             // creer un objet type etudiant
@@ -96,10 +96,10 @@ class SecurityController extends AbstractController{
             $etu->setDate($date);
             $etu->setTelephone($telephone);
             $etu->setId_bourse($bourse);
-            $etu->setAdresse($adresse);
+             $etu->setAdresse($adresse);
             $insert= Etudiant::fromArray($etu); 
-            /*  var_dump($insert);
-            die();  */ 
+            /* var_dump($insert);
+            die(); */  
             $personne->insert($insert);
 
             }else{

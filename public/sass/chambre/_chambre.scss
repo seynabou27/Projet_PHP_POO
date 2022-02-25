@@ -1,0 +1,45 @@
+/////////////////////liste_chambre///////////////////////////
+*{
+    box-sizing: border-box;
+}
+.centre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chambre{
+    display: flex;
+    padding: 3%;
+   
+    
+   
+}
+
+
+    .chambre > p {
+        font-size: 21px;
+       
+    }
+    .ajou{
+
+        border: 1px solid #171D2E;
+        background-color: #171D2E;
+        color: white;
+        border-radius: 3px 3px 3px 3px;
+       
+        
+        
+        
+    }  
+   
+    .filtr{
+    
+        border: 1px solid #171D2E;
+        background-color: white;
+        color: #171D2E;
+        border-radius: 3px 3px 3px 3px;
+        
+        
+    } 
+
