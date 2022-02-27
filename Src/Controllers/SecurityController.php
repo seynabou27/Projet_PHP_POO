@@ -28,7 +28,7 @@ class SecurityController extends AbstractController{
           $this->persRepo=new PersonneRepository;
           $this->etuRepo=new EtudiantRepository;
           $this->request=new Request;
-          $this->pavillon=new PavillonRepository;
+          $this->pavRepo=new PavillonRepository;
           $this->rpRepo=new RPRepository;
          
 
@@ -69,12 +69,12 @@ class SecurityController extends AbstractController{
         $arrErr=[];
          if($request->isPost()){
            extract($request->request());
-           $this->validator->isVide($login,"login");
-           $this->validator->isVide($matri,"matri");
-           $this->validator->isVide($nom,"nom");
-           $this->validator->isVide($prenom,"prenom");
+            $this->validator->isVide($login,"login");
+            $this->validator->isVide($matri,"matri");
+            $this->validator->isVide($nom,"nom");
+            $this->validator->isVide($prenom,"prenom");
             $this->validator->isVide($date,"date");
-           $this->validator->isVide($tuteur,"tuteur");
+            $this->validator->isVide($tuteur,"tuteur");
             $this->validator->isVide($telephone,"tele");
 /*             $this->validator->isVide($adresse,"adresse");
  */

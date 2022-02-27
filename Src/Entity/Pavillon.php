@@ -13,10 +13,25 @@ class Pavillon {
     }
     
 
+    
+
+    public static function  fromArray(object $pavillon):array{
+      $arr=  array_values((array)$pavillon);
+      $arr[]=$arr[0];
+      $arr[]=$arr[1];
+      $arr[]=$arr[2];
+        unset($arr[0]);
+        unset($arr[1]);
+        unset($arr[2]);
+       
+
+        return  array_values($arr);
+    }
+
     /**
      * Get the value of id_pavillon
      */ 
-    public function getIdPavillon()
+    public function getId_pavillon()
     {
         return $this->id_pavillon;
     }
@@ -26,58 +41,70 @@ class Pavillon {
      *
      * @return  self
      */ 
-    public function setId($id_pavillon)
+    public function setId_pavillon($id_pavillon)
     {
-        $this->id = $id_pavillon;
+        $this->id_pavillon = $id_pavillon;
 
         return $this;
     }
 
     /**
-     * Get the value of nomPavillon
+     * Get the value of nom_pavillon
      */ 
-    public function getNompavillon()
+    public function getNom_pavillon()
     {
-        return $this->nomChambre;
+        return $this->nom_pavillon;
     }
 
     /**
-     * Set the value of numPavillon
+     * Set the value of nom_pavillon
      *
      * @return  self
      */ 
-    public function setNumPavillon($num_pavillon)
+    public function setNom_pavillon($nom_pavillon)
     {
-        $this->numChambre = $num_pavillon;
+        $this->nom_pavillon = $nom_pavillon;
 
         return $this;
     }
 
     /**
-     * Get the value of etage
+     * Get the value of num_pavillon
      */ 
-    public function getNbr_Etage()
+    public function getNum_pavillon()
     {
-        return $this->Nbr_Etage;
+        return $this->num_pavillon;
     }
 
     /**
-     * Set the value of etage
+     * Set the value of num_pavillon
      *
      * @return  self
      */ 
-    public function setNbr_Etage($nbr_etage)
+    public function setNum_pavillon($num_pavillon)
     {
-        $this->login = $nbr_etage;
+        $this->num_pavillon = $num_pavillon;
 
         return $this;
     }
 
-    public static function  fromArray(object $pavillon):array{
-      $arr=  array_values((array)$pavillon);
-       $arr[]="";
-       $arr[]="";
-       $arr[]="";
-       return  $arr;
+    /**
+     * Get the value of nbr_etage
+     */ 
+    public function getNbr_etage()
+    {
+        return $this->nbr_etage;
+    }
+
+    /**
+     * Set the value of nbr_etage
+     *
+     * @return  self
+     */ 
+    public function setNbr_etage($nbr_etage)
+    {
+        $this->nbr_etage = $nbr_etage;
+
+        return $this;
     }
 }

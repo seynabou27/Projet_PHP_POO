@@ -7,7 +7,7 @@ class Chambre{
     protected int $id_chambre;
     protected string $num_chambre;
     protected string $num_etage;
-    protected string $id_type_chambre;
+    protected int $id_type_chambre;
     protected string $id_pavillon;
 
 

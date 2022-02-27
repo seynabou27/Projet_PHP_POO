@@ -11,11 +11,11 @@
     </div>  
     <div class="pav2 col-4 ">
       <div class="btn1 ">
-        <a type="button" class="nav-link fil" href="#">Filtre</a>
-
+<!--         <a type="button" class="nav-link fil" href="#">Filtre</a>
+ -->
       </div>  
       <div class="btn">
-        <a type="button" class="nav-link ajo" href="<?=WEBROOT."etudiant/showEtudiants1"?>"><i class="fas fa-plus "></i>Ajouter</a>
+        <a type="button" class="nav-link ajo" href="<?=WEBROOT."chambre/voirchambre"?>"><i class="fas fa-plus "></i>Ajouter</a>
 
       </div>
     </div>

@@ -1,0 +1,609 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+$font-family: Arial, open, sans-serif;
+
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@font-face {
+	font-family: 'Material Icons';
+	font-style: normal;
+	font-weight: 400;
+	src: url('https://example.com/MaterialIcons-Regular.eot'); /* For IE6-8 */
+	src: local('Material Icons'),
+	  local('MaterialIcons-Regular'),
+	  url('https://example.com/MaterialIcons-Regular.woff2') format('woff2'),
+	  url('https://example.com/MaterialIcons-Regular.woff') format('woff'),
+	  url('https://example.com/MaterialIcons-Regular.ttf') format('truetype');
+  }
+@font-face {
+	font-family: 'icomoon';
+	src:url('http://www.icutpeople.com/icomoon/fonts/icomoon.eot');
+	src:url('http://www.icutpeople.com/icomoon/fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('http://www.icutpeople.com/icomoon/fonts/icomoon.svg#icomoon') format('svg'),
+		url('http://www.icutpeople.com/icomoon/fonts/icomoon.woff') format('woff'),
+		url('http://www.icutpeople.com/icomoon/fonts/icomoon.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+body {
+	margin: 0px auto; 
+}
+h1 {
+	font-family: $font-family;
+	font-size: 2em;
+	color: #125E8B;
+	text-align: center;
+	margin: 100px 0 10px 0;
+	letter-spacing: 2px;
+}
+.device:after {
+	margin: 0 auto;
+	content: "Widescreen";
+	font-family: $font-family;
+	font-size: 1.4em;
+	color: #000;
+	text-align: center;
+	
+	@include respond-to(tablets) {
+		content: "Tablets";
+	}
+	@include respond-to(handhelds) {
+		content: "Handhelds";
+	}
+}
+	/* p {
+		font-family: $font-family;
+		font-size: 0.9em;
+		color: rgb(255, 255, 255);
+		text-align: center;
+		letter-spacing: 4px;
+		margin-bottom: 15px;
+	} */
+header {
+	width: 100%;
+	min-width: 280px;
+	height: auto;
+	background:#171D2E;
+	margin: 0 auto;
+	padding: 0;
+	@include respond-to(tablets) {
+		height: auto;
+	}
+	@include respond-to(handhelds) {
+		width: 100%;
+		height: auto;
+	}
+}
+header:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
+  .form-control::placeholder {
+	color: #6c757d;
+	opacity: 1;
+	background-color: #171D2E;
+	background: #314055 0% 0% no-repeat padding-box;
+	height: 46px;
+	border-color: #314055 0% 0% no-repeat padding-box;
+  }
+ .search{
+  margin-left: 60%;
+  
+  
+} 
+.deconnexion{
+    border-width: 23%;
+    float: right;
+    border: 11px solid white;
+    background-color: white;
+    color: #171D2E;
+    border-radius: 3px 3px 3px 3px;
+	margin-top: 3%;
+	margin-right: 4%;
+  }
+nav {
+	width: 100%; /* 630 */
+	height: auto;
+	
+	margin: 0px 0 0 0;
+    padding: 0 0 20px 0;
+	z-index: 100;
+	background: transparent;
+	@include respond-to(wide-screens) {
+		display: block !important;
+	}
+	@include respond-to(tablets) {
+		width: 100%;
+		display: none;
+		height: auto;
+		margin: 0;
+		padding: 1% 4% 2% 4%;
+		background: #125E8B;
+		position: relative;
+	}
+	@include respond-to(handhelds) {
+		width: 100%;
+		height: 35px;
+		display: none;
+		height: auto;
+		margin: 0;
+		padding: 2% 4% 2% 4%;
+		background: #125E8B;
+		position: relative;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+
+		li {
+			list-style: none;
+			display: inline-block;
+			margin: 0;
+			padding: 3% 0 0 2%;
+			@include respond-to(tablets) {
+				padding: 2% 2% 0 2%;
+				width: 100%;
+				display: block;
+				text-align: center;
+				position: relative;
+				}
+			@include respond-to(handhelds) {
+				padding: 2% 2% 0 2%;
+				width: 100%;
+				display: block;
+				text-align: center;
+				position: relative;
+			}
+
+			a {
+				font-family: $font-family;
+				font-size: 1em;
+                margin-left: 10%;
+				font-weight: normal;
+				text-decoration: none;
+			    color: #FFFFFF;
+				padding: 0 0 15px 0;
+				outline: none;
+				letter-spacing: 3px;
+				@include respond-to(tablets) {
+					font-size: 1.4em;
+					color: #fff;
+					letter-spacing: 3px;
+					padding: 0 4% 1% 4%;
+					border-bottom: 1px solid #167FBD;
+				    display: block;
+				    position: relative;
+				}
+				@include respond-to(handhelds) {
+					font-size: 1.1em;
+					color: #fff;
+					letter-spacing: 2px;
+					padding: 0 4% 1% 4%;
+					border-bottom: 1px solid #167FBD;
+				    display: block;
+				    position: relative;
+				    text-align: left;
+				}
+
+				&:hover {
+					text-decoration: none;
+					color: #4B9AC8;
+					@include respond-to(tablets) {
+						color: #fff;
+					}
+					@include respond-to(handhelds) {
+						color: #fff;
+					}
+				}
+			}
+		}
+
+		li ul {
+		display: none;
+		@include respond-to(wide-screens) {
+			display: none !important;
+		}
+   }
+	
+   li:hover ul {
+     	display: block;
+		position: absolute;
+		background-color: #167FBD;
+		z-index: 500;
+		margin: 0;
+		width: 200px;
+		margin: 15px 0 0 0;
+		padding: 0 0 1% 0;
+		@include respond-to(wide-screens) {
+			display: block !important;
+		}
+		@include respond-to(tablets) {
+			display: none;
+			width: 100%;
+			height: auto;
+			margin: 0;
+			padding: 0;
+			position: relative;
+		}
+		@include respond-to(handhelds) {
+			display: none;
+			width: 100%;
+			height: auto;
+			margin: 0;
+			padding: 0;
+			position: relative;
+			opacity: 1;
+		}
+    }
+       li ul li {
+	    	margin: 0;
+	    	float: none; 
+	        display: block;
+	        text-align: left;
+	        background-color: #ffffff;
+
+        a {
+        	font-size: 0.7em;
+			color: rgb(0, 0, 0);
+			outline: none;
+			text-align: left;
+			padding: 4% 4%;
+			outline: none;
+			@include respond-to(tablets) {
+				    font-family: $font-family;
+					font-size: 1em;
+					font-weight: normal;
+					text-align: center;
+					padding: 0 4% 1% 0%;
+				}
+				@include respond-to(handhelds) {
+				    font-family: $font-family;
+					font-size: 1em;
+					font-weight: normal;
+					text-align: left;
+					padding: 0 4% 2% 2%;
+					margin-left: 2.5%;
+					border: none;
+				}
+
+			&:hover {
+				color: #89CAF1;
+				@include respond-to(tablets) {
+					color: #fff;
+				}
+				@include respond-to(handhelds) {
+					color: #fff;
+				}
+			}
+
+        }
+
+    }
+
+  }
+}   
+.plus:after {
+	display: none;
+	@include respond-to(tablets) {
+		display: inline;
+		content: "+";
+		font-family: 'icomoon';
+		font-size: 0.5em;
+		padding-left: 1.2%;
+		text-transform: none;
+	}
+	@include respond-to(handhelds) {
+		display: inline;
+		content: "+";
+		font-family: 'icomoon';
+		font-size: 0.5em;
+		padding-right: 1.2%;
+		text-transform: none;
+		float: right;
+	}
+}
+.minus:after {
+    display: none;
+    @include respond-to(tablets) {
+    	display: inline;
+    	content: "-";
+    	font-family: 'icomoon';
+    	font-size-size: 0.5em;
+    	padding-left: 1.5%;
+    }
+    @include respond-to(handhelds) {
+    	display: inline;
+    	content: "-";
+    	font-family: 'icomoon';
+    	font-size-size: 0.5em;
+    	padding-right: 1.5%;
+    	float: right;
+    }
+}
+a.navdrop:link, a.navdrop:active, a.navdrop:visited {
+	font-family: 'icomoon';
+	color: #fff;
+	background: #35819B;
+	padding: 8px 8px 5px 8px;
+	font-size: 1em;
+	text-decoration: none;
+	outline: none;
+	font-weight: normal;
+	display: none;
+	float: right;
+    margin: 15px 20px 20px 0;
+	border: 1px solid #185970;
+	@include gradient(top, #2F6B7F, #35819B);
+	@include border(5px);
+	@include respond-to(tablets) 
+        { 
+        	display: inline; 
+        }
+	@include respond-to(handhelds) 
+        { 
+        	display: inline; 
+        }
+}
+.navdrop:before {
+	content: "%";
+	font-family: 'icomoon';
+	font-weight: normal;
+}
+.navdrop.close:before {
+	content: "&";
+	font-family: 'icomoon';
+	font-weight: normal;
+}
+.page-wrap {
+	width: 100%; /* 960 */
+	min-width: 280px;
+	height: auto;
+	background: #171D2E;
+	margin: 0 auto;
+	padding: 0 0 20px 0;
+	@include respond-to(handhelds) {
+		width: 100%;
+	}
+}
+.page-wrap:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+
+
+
+
+
+
+
+/* :root{
+    --hauteur-menu: 60px;
+  }
+
+/*   label, #toggle
+{
+    display: none;
+}
+
+ 
+@media all and (max-width: 991px)
+{
+    nav
+    {
+        height: 60px;
+    }
+ 
+    nav .nav-bar 
+    {
+        display: none;
+        flex-direction: column;
+        background: #48435C;
+        height: 220px;
+    }
+ 
+    nav .nav-bar a {
+        width: 50%;
+    }
+ 
+    label 
+    {
+        width: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
+    }
+ 
+    #toggle:checked + .nav-bar {
+        display: flex;
+    } 
+
+  * {
+    margin: 0px;
+    padding: 0px;
+    font-family: Montserrat, sans-serif;
+    box-sizing: border-box;
+   
+    
+    
+  }
+ 
+  nav {
+    background-color: #171D2E;
+    width: 100%;
+    font-size: 15px;
+    position: sticky;
+    top: 0;
+    height: 70px;
+  }
+  nav > ul {
+    display: flex;
+    text-align: center;
+/*     box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.3);
+     height: var(--hauteur-menu);
+  }
+  
+  nav ul {
+    list-style-type: none;
+  }
+  
+  nav > ul > li {
+    background-color: #171D2E;
+    position: relative;
+    height: 100%;
+    /* flex: 1; 
+    
+  }
+  nav > ul > li {
+    background-color: #171D2E;
+    position: relative;
+    height: 100%;
+    flex: 1;
+  }
+  nav > ul > li > a {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-30%, -30%);
+  }
+  
+  li a {
+    text-decoration: none;
+    color: #d3cdcdef;
+  }
+  .sous-menu li a {
+    text-decoration: none;
+    color: #000000ef;
+  }
+  .menu-deroulant > a:after{
+    font-size: 10px;
+    margin-left: 10px;
+    display: inline-block;
+  }
+  .sous-menu {
+    margin-top: var(--hauteur-menu);
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    border-radius: 2px;
+    overflow: hidden;
+    max-height: 0;
+    padding-right: 13px;
+    padding-left: 10px;
+  }
+  .menu-deroulant > li{
+      padding: 0;
+  }
+  
+  
+  .sous-menu > li > a {
+    height: 50px;
+    padding-left: 2px;
+    width: 100%;
+    align-items: center;
+    display: flexbox;    
+
+  }
+  nav > ul > li:hover > a{
+    color: #2169EC;
+  }
+  .sous-menu > li:hover {
+    background-color: rgba(33, 105, 236, 0.3);
+  }
+  
+  .sous-menu > li:hover > a {
+    color: white;
+  }
+  @keyframes rotationFleche {
+    0% {
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(90deg);
+    }
+  }
+  .menu-deroulant:hover > a:after{
+    animation: rotationFleche 0.2s linear forwards;
+  }
+  @keyframes apparitionSousMenu {
+    0% {
+      box-shadow: 0px 3px 3px 1px rgba(0,0,0,0);
+      border-top: 3px solid #2169EC;
+    }
+    30% {
+      box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+    }
+    100% {
+      max-height: 50em;
+      border-top: 3px solid #2169EC;
+      box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+    }
+  }
+  .menu-deroulant:hover > .sous-menu {
+    animation: apparitionSousMenu 1s forwards;
+  }
+
+  .button {
+    background-color: #ffffff;
+    border: none;
+    color: #171D2E;
+    padding: 12px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 7px 111px;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+  .form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 1.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #171D2E;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    margin-left: 36%;
+  }
+  .form-control::placeholder {
+    outline: 0;
+    color: #6c757d;
+    opacity: 1;
+    background-color: #171D2E;
+    background: #314055 0% 0% no-repeat padding-box;
+    height: 48px;
+    border-color: #314055 0% 0% no-repeat padding-box;
+  }
+  .navbar {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0.5rem 3rem;
+  }
+   */

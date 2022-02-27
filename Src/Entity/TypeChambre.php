@@ -10,7 +10,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 
 class TypeChambre extends Chambre implements EntityInterface{
 
-    private int $id_type_chambre;
+    protected int $id_type_chambre;
     private string $nom_type_chambre;
 
 

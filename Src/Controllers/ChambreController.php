@@ -8,6 +8,8 @@ use App\Core\Session;
 use App\Entity\Chambre;
 use App\Entity\TypeChambre;
 use App\Repository\EtudiantRepository;
+use App\Manager\ChambreManager;
+
 use App\Repository\PavillonRepository;
 use App\Repository\PersonneRepository;
 use App\Repository\ChambreRepository;
@@ -30,7 +32,7 @@ class ChambreController extends AbstractController{
           $this->etuRepo=new EtudiantRepository;
           $this->request=new Request;
           $this->pavillon=new PavillonRepository;
-          $this->chambre=new ChambreRepository;
+          $this->chamRepo=new ChambreRepository;
 
     }
 
@@ -38,22 +40,21 @@ class ChambreController extends AbstractController{
         $arrErr=[];
          if($request->isPost()){
            extract($request->request());
-            $this->validator->isVide($numero1,"numero1");
-            $this->validator->isVide($numero2,"numero2");
-           /*  $this->validator->isVide($type,"type"); */
+             $this->validator->isVide($numero1,"numero1");
+             $this->validator->isVide($numero2,"numero2");
             if($this->validator->valid()){
-           
-            /* $TypeChambre = new TypeChambre  ;
-            $bourse->setId($id_bourse);
-            $cham=new TypeChambre;
-             $cham=new ChambreManager; */
-           $cham->setNum_chambre($numero1);
-            $cham->setNum_etage($numero2);
+                
+            $typechambre = new TypeChambre;
+            $typechambre->setId_type_chambre($id_type_chambre);
+            $chambre=new Chambre;
+            $cham=new ChambreManager;
+            $chambre->setNum_chambre($numero1);
+            $chambre->setNum_etage($numero2);
 
-            $insert= Chambre::fromArray($cham); 
-              var_dump($insert);
-            die();   
-            $chambre->insert($insert);
+            $insert= Chambre::fromArray($chambre); 
+             var_dump($insert);
+            die();  
+            $cham->insert($insert);
 
             }else{
                  Session::setSession("errors",$this->validator->getErreurs() );
@@ -76,7 +77,7 @@ class ChambreController extends AbstractController{
     }
 
     public function showChambre1(){
-        $cham=$this->chambre->findAll_chambre();
+        $cham=$this->chamRepo->findAll_chambre();
         $this->render("chambre/liste.chambre.html.php",["cham"=>$cham]);
     }
     

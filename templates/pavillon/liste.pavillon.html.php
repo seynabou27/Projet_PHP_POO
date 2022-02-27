@@ -9,13 +9,28 @@
       <H4>Listes des pavillons</H4>
 
     </div>  
-    <div class="pav2 col-4 ">
-      <div class="btn1 ">
+    <div class="pav2 col-5 ">
+    <div class=" form-inline filt2">
+          <label class="mr-3">Type </label>
+          <form method="post" action="">
+          <input type="hidden" name="controlleurs" value=""/>
+          <input type="hidden" name="action" value=""/>
+                <select class="form-control" name="etat" id="">
+                  <option></option>
+                  <option></option>
+                  
+
+                </select>
+                <button type="submit" class="btn b" style="background-color: #171D2E; color:white;" name="ok" style="background-color: #005CA5; color:#fff;"><b>ok</b></button>
+
+         </form>
+          </div>
+      <!-- <div class="btn1 ">
         <a type="button" class="nav-link fil" href="#">Filtre</a>
 
-      </div>  
+      </div>  --> 
       <div class="btn">
-        <a type="button" class="nav-link ajo" href="<?=WEBROOT."etudiant/showEtudiants1"?>"><i class="fas fa-plus "></i>Ajouter</a>
+        <a type="button" class="nav-link ajo" href="<?=WEBROOT."pavillons/voirPavillon"?>"><i class="fas fa-plus "></i>Ajouter</a>
 
       </div>
     </div>
@@ -34,11 +49,11 @@
       </tr>
     </thead>
     <tbody>
-      <?php foreach ($pav as $pavs):?>
+      <?php foreach ($pavi as $pavss):?>
       <tr>
-          <td><?=$pavs->nom_pavillon?></td>
-            <td><?=$pavs->num_pavillon?></td>
-            <td><?=$pavs->nbr_etage?></td>
+          <td><?=$pavss->nom_pavillon?></td>
+            <td><?=$pavss->num_pavillon?></td>
+            <td><?=$pavss->nbr_etage?></td>
         <td> <button class="modif" type="submit">Modifier</button> <button class="filt" type="submit">Archiver</button></td>
 
       </tr>

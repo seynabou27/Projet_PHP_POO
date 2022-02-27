@@ -2,19 +2,19 @@
 namespace App\Manager;
 use App\Core\Orm\AbstractManager;
 
-class ChambreManager extends AbstractManager{
+class PavillonManager extends AbstractManager{
     
     protected string $role;
     public function __construct()
     {
         parent::__construct();
-        $this->tableName="chambre";
-        $this->primaryKey="id_chambre";
+        $this->tableName="pavillon";
+        $this->primaryKey="id_pavillon";
     }
    
 
     public function insert(array $model):int{
-         $sql="INSERT INTO `chambre` (`num_chambre`, `num_etage`, `id_type_chambre`, `id_pavillon`) VALUES (?, ?, ?, ?);";
+         $sql="INSERT INTO `pavillon` (`nom_pavillon`, `num_pavillon`, `nbr_etage`) VALUES (?, ?, ?)";
         return $this->dataBase->executeUpdate($sql,$model);
     }
       public  function update(array $model):int{

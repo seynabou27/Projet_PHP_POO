@@ -11,7 +11,7 @@ if(Session::keyExist("errors")){
 
 <div class="groupe3">
     <div class="outline">
-       <a class="text12" href="<?=WEBROOT."etudiant/showChambre1"?>"> <img  src="./../img/outline.png" alt="hhhh">Retour vers chambre</a>
+       <a class="text12" href="<?=WEBROOT."chambre/showChambre1"?>"> <img  src="./../img/outline.png" alt="hhhh">Retour vers chambre</a>
 
     </div>    
     <h3 class="text"><b>Ajout chambres</b></h3>
@@ -19,7 +19,7 @@ if(Session::keyExist("errors")){
  -->  
 </div> 
 <div class="principale">
-    <p class="annonce">Pour ajouter un nouveau etudiant, veuillez remplir <br> <br> le formulaire ci-dessous</p>
+    <p class="annonce">Pour ajouter une nouvelle chambre, veuillez remplir <br> <br> le formulaire ci-dessous</p>
     <form class=form  method="post" action="<?=WEBROOT."chambre/ajout_chambre"?>" enctype="multipart/form-data">
 
     <div class="form1">
@@ -50,8 +50,8 @@ if(Session::keyExist("errors")){
                 <label for="type"></label>
                     <select  class="select1" name="id_type_chambre" id="">
                          <option value="0">Choisir</option>
-                         <?php foreach($bourses as $brs): ?>
-                            <option value="<?=$brs->id_bourse?>"><?=$brs->type_bourse?></option>
+                         <?php foreach($typechambre as $type): ?>
+                            <option value="<?=$type->id_type_chambre?>"><?=$type->nom_type_chambre?></option>
                         <?php endforeach; ?>
                     </select>
             </div>
@@ -59,7 +59,7 @@ if(Session::keyExist("errors")){
 
         <div class="tt">
         <div class="a">
-            <a type="button" class="nav-link annuler  " href="#">Annuler</a>
+            <a type="button" class="nav-link annuler  " href="<?=WEBROOT."chambre/showChambre1"?>">Annuler</a>
 
         </div>
         <div class="aa">
