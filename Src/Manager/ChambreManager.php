@@ -13,12 +13,16 @@ class ChambreManager extends AbstractManager{
     }
    
 
-    public function insert(array $model):int{
+public function insert(array $model):int{
          $sql="INSERT INTO `chambre` (`num_chambre`, `num_etage`, `id_type_chambre`, `id_pavillon`) VALUES (?, ?, ?, ?);";
         return $this->dataBase->executeUpdate($sql,$model);
     }
-      public  function update(array $model):int{
-        $sql="update  $this->tableName  `chambre` (`id_chambre`, `num_chambre`, `num_etage`, `id_type_chambre`, `id_pavillon`) VALUES (NULL, 'Z1', '7', '1', '1'); $this->primaryKey=?";
+public  function update(array $model):int{
+        $sql="update  $this->tableName  `chambre` set 
+               `num_chambre`=?, `num_etage`=? ,`id_type_chambre`=? ,`id_pavillon` =?, `etat` =?
+                 where $this->primaryKey=?";
         return $this->dataBase->executeUpdate($sql,$model);
       }
 }
+  
+

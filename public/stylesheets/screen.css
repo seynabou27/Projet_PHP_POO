@@ -908,7 +908,16 @@ h2 {
   border-radius: 3px 3px 3px 3px;
 }
 
-/* line 36, ../sass/chambre/_chambre.scss */
+/* line 35, ../sass/chambre/_chambre.scss */
+.modif1 {
+  border: 8px solid #171D2E;
+  background-color: #171D2E;
+  color: white;
+  border-radius: 3px 3px 3px 3px;
+  margin-right: 2%;
+}
+
+/* line 45, ../sass/chambre/_chambre.scss */
 .filtr {
   border: 1px solid #171D2E;
   background-color: white;
@@ -916,7 +925,17 @@ h2 {
   border-radius: 3px 3px 3px 3px;
 }
 
-/* line 47, ../sass/chambre/_chambre.scss */
+/* line 54, ../sass/chambre/_chambre.scss */
+.filt1 {
+  border: 1px solid #171D2E;
+  background-color: white;
+  color: #171D2E;
+  border-radius: 3px 3px 3px 3px;
+  height: 36px;
+  width: 119%;
+}
+
+/* line 66, ../sass/chambre/_chambre.scss */
 .select1 {
   width: 819px;
   margin-left: 23px;

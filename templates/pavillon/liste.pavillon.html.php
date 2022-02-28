@@ -54,7 +54,7 @@
           <td><?=$pavss->nom_pavillon?></td>
             <td><?=$pavss->num_pavillon?></td>
             <td><?=$pavss->nbr_etage?></td>
-        <td> <button class="modif" type="submit">Modifier</button> <button class="filt" type="submit">Archiver</button></td>
+        <td><a href="#"  class="modif1">Modifier</a></td>
 
       </tr>
   <?php endforeach ?>   

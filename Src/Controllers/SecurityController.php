@@ -123,6 +123,7 @@ class SecurityController extends AbstractController{
     }
     public function showEtudiants(){
         $users=$this->etuRepo->findAll();
+      
         $this->render("etudiant/liste.etudiant.html.php",["users"=>$users]);
     }
     public function showAccueil(){

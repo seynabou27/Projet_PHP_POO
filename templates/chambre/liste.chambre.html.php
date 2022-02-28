@@ -14,7 +14,7 @@
 <!--         <a type="button" class="nav-link fil" href="#">Filtre</a>
  -->
       </div>  
-      <div class="btn">
+      <div class="btn" style="margin-left: 23%;">
         <a type="button" class="nav-link ajo" href="<?=WEBROOT."chambre/voirchambre"?>"><i class="fas fa-plus "></i>Ajouter</a>
 
       </div>
@@ -27,20 +27,42 @@
         
         <th scope="col">Numéro chambre</th>
         <th scope="col">Numéro Etage</th>
+        <th scope="col">Pavillon</th>
         <th scope="col">Action</th>
 
 
+          <!-- <td>
+          <form action="<?=WEBROOT."chambre/archiverChambre"?>" method="post">
+              <input type="hidden" name="id_chambre" value="<?=$chams->id_chambre?>">
+              <button class="filt" name="btn" type="submit">Archiver</button>
+          </form>
+          </td> -->
+          
+
       </tr>
-    </thead>
+      </thead>
     <tbody>
       <?php foreach ($cham as $chams):?>
       <tr>
           <td><?=$chams->num_chambre?></td>
           <td><?=$chams->num_etage?></td>
-        <td> <button class="modif" type="submit">Modifier</button> <button class="filt" type="submit">Archiver</button></td>
+          <td><?=$chams->id_pavillon?><?=$chams->nom_pavillon?></td>
+          <td style="display: flex;">
+          
+            <a href="#" class="modif1">Modifier</a>
+            <form action="<?=WEBROOT."chambre/archiverChambre"?>" method="post">
+              <input type="hidden" name="id_chambre" value="<?=$chams->id_chambre?>">
+              <button class="filt1" name="btn" type="submit">Archiver</button>
+            </form>
 
-      </tr>
-  <?php endforeach ?>   
+        
+          </td>
+
+        
+        </tr>
+        <?php endforeach ?>   
+      
+    </tbody>
       
     </tbody>
   </table>

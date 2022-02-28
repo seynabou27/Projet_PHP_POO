@@ -27,7 +27,7 @@ if(Session::keyExist("errors")){
        <div class="row">
            <div class="form-controle">
                 <label for="nom"></label>
-                <input type="text" name="numero1" placeholder="Numéro de la chambre">
+                <input type="text" value="<?=isset($restor[0]->num_chambre) ? $restor[0]->num_chambre : ""?>" name="numero1" placeholder="Numéro de la chambre">
                 <?php if(isset($arrErrors['numero1'])): ?>
                     <small id=""  class="form-text text-danger"><?=$arrErrors['numero1']?></small>
                 <?php endif ?>

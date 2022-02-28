@@ -17,6 +17,13 @@ class ChambreRepository extends AbstractRepository{
          $sql="select * from $this->tableName ";
           return $this->dataBase->executeSelect($sql);
       }
+      function findById(int $id): array{
+
+        $sql="select * from $this->tableName  where $this->primaryKey=?";
+        return $this->dataBase->executeSelect($sql,[$id]);
+          
+      }
+
 
      
       function findChambre(string $num):object|bool{

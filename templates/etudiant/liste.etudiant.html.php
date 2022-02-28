@@ -15,17 +15,13 @@
 
     <div class=" form-inline filtr1">
           <label class="mr-3">Type </label>
-          <form method="post" action="">
-          <input type="hidden" name="controlleurs" value=""/>
-          <input type="hidden" name="action" value=""/>
-                <select class="form-control" name="etat" id="">
-                  <option>Bourssier</option>
-                  <option>Non Boursier</option>
-                  
-
+          <form method="post" action="<?=WEBROOT."etudiant/showEtudiants"?>">
+                <select class="form-control" name="type_etu" id="">
+                  <option value="">Choisir</option>
+                  <option value="boursier">Bourssier</option>
+                  <option value="nonboursier">Non Boursier</option>
                 </select>
-                <button type="submit" class="btn b" style="background-color: #171D2E; color:white;" name="ok" style="background-color: #005CA5; color:#fff;"><b>ok</b></button>
-
+                <button type="submit" class="btn b" name="filtre" style="background-color: #171D2E; color:white;" name="ok" style="background-color: #005CA5; color:#fff;"><b>ok</b></button>
          </form>
           </div>
 <!--     <a type="button" class="nav-link  filtre" href="#">Filtre</a>
@@ -38,23 +34,22 @@
     <tr>
       
       <th scope="col">Prenom/Nom</th>
-      <th scope="col">Etat bourse</th>
+      <th scope="col">bourse</th>
       <th scope="col">Tuteur</th>
       <th scope="col">Date naissance</th>
-      <th scope="col">Action</th>
+      <th scope="col">Adresse</th>
 
 
     </tr>
   </thead>
   <tbody>
     <?php foreach ($users as $user):?>
-    <tr>
+    <tr> <?php isset($user->id_bourse) && $user->id_bourse==1 ? $b = 'bourse_entier' : "" ?> <?php isset($user->id_bourse) && $user->id_bourse==2 ? $b = 'demi_bourse' : "" ?>
       <td><?=$user->prenom?><?=$user->nom?></td>
-      <td><?=$user->type?></td>
+      <td><?=isset($user->id_bourse)? $b : "-"?></td>
       <td><?=$user->tuteur?></td>
       <td><?=$user->date_naissance?></td>
-      <td> <button class="modif" type="submit">Modifier</button> <button class="filt" type="submit">Archiver</button></td>
-
+      <td><?=isset($user->adresse) ?$user->adresse : "-" ?></td>
     </tr>
 <?php endforeach ?>   
     

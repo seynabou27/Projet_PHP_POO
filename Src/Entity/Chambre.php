@@ -9,6 +9,7 @@ class Chambre{
     protected string $num_etage;
     protected int $id_type_chambre;
     protected int|null $id_pavillon;
+    private string $etat;
 
 
     public function __construct(){
@@ -22,6 +23,18 @@ class Chambre{
 
     public static function  fromArray(object $chambre):array{
       $arr=  array_values((array)$chambre);
+      $arr[]=$arr[1];
+      $arr[]=$arr[2];
+      $arr[]=$arr[3];
+      $arr[]=$arr[4];
+      $arr[]=$arr[5];
+      $arr[]=$arr[0];
+      unset($arr[0]);
+        unset($arr[1]);
+        unset($arr[2]); 
+        unset($arr[3]); 
+        unset($arr[4]);  
+        unset($arr[5]);  
       /* $arr[]=null; */
      /*  /* $arr[]=$arr[0]; */
       /* $arr[]=$arr[1];
@@ -151,6 +164,26 @@ class Chambre{
     public function setId_pavillon($id_pavillon)
     {
         $this->id_pavillon = $id_pavillon;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of etat
+     */ 
+    public function getEtat()
+    {
+        return $this->etat;
+    }
+
+    /**
+     * Set the value of etat
+     *
+     * @return  self
+     */ 
+    public function setEtat($etat)
+    {
+        $this->etat = $etat;
 
         return $this;
     }
