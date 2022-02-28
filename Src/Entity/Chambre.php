@@ -8,7 +8,7 @@ class Chambre{
     protected string $num_chambre;
     protected string $num_etage;
     protected int $id_type_chambre;
-    protected string $id_pavillon;
+    protected int|null $id_pavillon;
 
 
     public function __construct(){
@@ -22,11 +22,29 @@ class Chambre{
 
     public static function  fromArray(object $chambre):array{
       $arr=  array_values((array)$chambre);
-       $arr[]="";
-       $arr[]="";
-       $arr[]="";
-       return  $arr;
+      /* $arr[]=null; */
+     /*  /* $arr[]=$arr[0]; */
+      /* $arr[]=$arr[1];
+      $arr[]=$arr[2];
+      $arr[]=null;  */
+      /* unset($arr[0]);
+        unset($arr[1]);
+        unset($arr[2]); 
+      
+      
+        /* unset($arr[0]);
+        unset($arr[1]);
+        unset($arr[2]); 
+        unset($arr[3]); 
+        unset($arr[4]);  
+ */
+ 
+       
+
+        return  array_values($arr);
+
     }
+    
 
     /**
      * Get the value of id_chambre
@@ -69,6 +87,29 @@ class Chambre{
     }
 
     /**
+     * Get the value of id_type_chambre
+     */ 
+    public function getId_type_chambre()
+    {
+        return $this->id_type_chambre;
+    }
+
+    /**
+     * Set the value of id_type_chambre
+     *
+     * @return  self
+     */ 
+    public function setId_type_chambre($id_type_chambre)
+    {
+        $this->id_type_chambre = $id_type_chambre;
+
+        return $this;
+    }
+
+    
+    
+
+    /**
      * Get the value of num_etage
      */ 
     public function getNum_etage()
@@ -88,25 +129,11 @@ class Chambre{
         return $this;
     }
 
-    /**
-     * Get the value of id_type_chambre
-     */ 
-    public function getId_type_chambre()
-    {
-        return $this->id_type_chambre;
-    }
+    
+    
 
-    /**
-     * Set the value of id_type_chambre
-     *
-     * @return  self
-     */ 
-    public function setId_type_chambre($id_type_chambre)
-    {
-        $this->id_type_chambre = $id_type_chambre;
-
-        return $this;
-    }
+    
+    
 
     /**
      * Get the value of id_pavillon
@@ -128,4 +155,3 @@ class Chambre{
         return $this;
     }
 }
-

@@ -13,14 +13,18 @@ use App\Manager\ChambreManager;
 use App\Repository\PavillonRepository;
 use App\Repository\PersonneRepository;
 use App\Repository\ChambreRepository;
+use App\Repository\TypeChambreRepository;
 
+use function PHPSTORM_META\type;
 
 class ChambreController extends AbstractController{
 
     private PersonneRepository $persRepo;
     private EtudiantRepository $etuRepo;
-    private PavillonRepository $pavillon;
+    private PavillonRepository $pavillons;
     private ChambreRepository $chambre;
+    private TypeChambreRepository $typechambre;
+
 
 
 
@@ -31,29 +35,36 @@ class ChambreController extends AbstractController{
           $this->persRepo=new PersonneRepository;
           $this->etuRepo=new EtudiantRepository;
           $this->request=new Request;
-          $this->pavillon=new PavillonRepository;
+          $this->pavillons=new PavillonRepository;
           $this->chamRepo=new ChambreRepository;
+          $this->typeRepo=new TypeChambreRepository;
+
 
     }
 
     public function ajout_chambre(Request $request){
         $arrErr=[];
          if($request->isPost()){
+            
            extract($request->request());
              $this->validator->isVide($numero1,"numero1");
              $this->validator->isVide($numero2,"numero2");
             if($this->validator->valid()){
-                
+             
             $typechambre = new TypeChambre;
             $typechambre->setId_type_chambre($id_type_chambre);
             $chambre=new Chambre;
             $cham=new ChambreManager;
             $chambre->setNum_chambre($numero1);
             $chambre->setNum_etage($numero2);
+            $chambre->setId_pavillon($id_pavillon);
+            $chambre->setId_type_chambre($id_type_chambre);
+
+
 
             $insert= Chambre::fromArray($chambre); 
-             var_dump($insert);
-            die();  
+            /* var_dump($insert);
+            die(); */    
             $cham->insert($insert);
 
             }else{
@@ -62,8 +73,12 @@ class ChambreController extends AbstractController{
             }
             $this->redirect("chambre/showChambre1");
         }
-        
-         $this->render("chambre/ajout.chambre.html.php");
+        $type=$this->typeRepo->findAll();
+        $hh=$this->pavillons->findAll();
+            /* var_dump($pavillons);
+            die; */
+        $this->render("chambre/ajout.chambre.html.php",["type"=>$type,"hh"=>$hh]);
+
      }
     
 
@@ -73,11 +88,14 @@ class ChambreController extends AbstractController{
    
     public function voirChambre(){
         
-        $this->render("chambre/ajout.chambre.html.php");
-    }
+        $type=$this->typeRepo->findAll();
+        $hh=$this->pavillons->findAll();
+
+        $this->render("chambre/ajout.chambre.html.php",["type"=>$type,"hh"=>$hh]);
+    } 
 
     public function showChambre1(){
-        $cham=$this->chamRepo->findAll_chambre();
+        $cham=$this->chamRepo->findAll();
         $this->render("chambre/liste.chambre.html.php",["cham"=>$cham]);
     }
     

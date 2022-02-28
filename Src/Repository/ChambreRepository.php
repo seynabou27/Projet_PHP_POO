@@ -10,9 +10,10 @@ class ChambreRepository extends AbstractRepository{
         parent::__construct();
         $this->primaryKey="id_chambre";
         $this->tableName="chambre";
+        
     }
    
-     function findAll_chambre():array{
+     function findAll():array{
          $sql="select * from $this->tableName ";
           return $this->dataBase->executeSelect($sql);
       }

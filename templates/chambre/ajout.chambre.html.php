@@ -1,5 +1,6 @@
 <?php
 
+
 use App\Core\Session;
 $arrErrors=[];
 if(Session::keyExist("errors")){
@@ -50,8 +51,21 @@ if(Session::keyExist("errors")){
                 <label for="type"></label>
                     <select  class="select1" name="id_type_chambre" id="">
                          <option value="0">Choisir</option>
-                         <?php foreach($typechambre as $type): ?>
-                            <option value="<?=$type->id_type_chambre?>"><?=$type->nom_type_chambre?></option>
+                         <?php foreach($type as $types): ?>
+                            <option value="<?=$types->id_type_chambre?>"><?=$types->nom_type_chambre?></option>
+                        <?php endforeach; ?>
+                    </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-controle" id="fcb">
+                <label for="type"></label>
+                    <select  class="select1" name="id_pavillon" id="">
+                         <option value="0">Choisir</option>
+                         <?php 
+                         foreach($hh as $pavil): ?>
+                           
+                            <option value="<?=$pavil->id_pavillon?>"><?=$pavil->nom_pavillon?></option>
                         <?php endforeach; ?>
                     </select>
             </div>

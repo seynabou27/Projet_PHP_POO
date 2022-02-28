@@ -16,6 +16,8 @@ class PavillonRepository extends AbstractRepository{
          $sql="select * from $this->tableName ";
           return $this->dataBase->executeSelect($sql);
       }
+
+      
       function findAll_pavillon1():array{
         $sql="select * from $this->tableName ";
          return $this->dataBase->executeSelect($sql);
