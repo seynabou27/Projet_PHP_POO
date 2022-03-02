@@ -37,6 +37,7 @@ class EtudiantController extends AbstractController{
 
     public function showEtudiants(){
       $users=$this->etuRepo->findAll();
+      
       $eb = $this->etuBoursier->findEtuBoursier();
       $enb = $this->etuNboursier->findEtuNonBoursier();
         if ($this->request->isPost()) {

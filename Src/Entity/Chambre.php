@@ -23,40 +23,32 @@ class Chambre{
 
     public static function  fromArray(object $chambre):array{
       $arr=  array_values((array)$chambre);
-      $arr[]=$arr[1];
-      $arr[]=$arr[2];
-      $arr[]=$arr[3];
-      $arr[]=$arr[4];
-      $arr[]=$arr[5];
-      $arr[]=$arr[0];
-      unset($arr[0]);
-        unset($arr[1]);
-        unset($arr[2]); 
-        unset($arr[3]); 
-        unset($arr[4]);  
-        unset($arr[5]);  
-      /* $arr[]=null; */
-     /*  /* $arr[]=$arr[0]; */
-      /* $arr[]=$arr[1];
-      $arr[]=$arr[2];
-      $arr[]=null;  */
-      /* unset($arr[0]);
-        unset($arr[1]);
-        unset($arr[2]); 
-      
-      
-        /* unset($arr[0]);
-        unset($arr[1]);
-        unset($arr[2]); 
-        unset($arr[3]); 
-        unset($arr[4]);  
- */
- 
-       
-
+    //   $arr[]=$arr[1];
+    //   $arr[]=$arr[2];
+    //   $arr[]=$arr[3];
+    //   $arr[]=$arr[4];
+    //   $arr[]=$arr[5];
+    //   $arr[]=$arr[0];
+        // unset($arr[0]);
+        // unset($arr[1]);
+        // unset($arr[2]); 
+        // unset($arr[3]); 
+        // unset($arr[4]);  
+        // unset($arr[5]);  
         return  array_values($arr);
 
     }
+
+
+
+
+    public static function  fromArrayUpdate(object $chambre):array{
+        $arr=  array_values((array)$chambre);
+        $arr[]=$arr[0];
+        unset($arr[0]);
+          return  array_values($arr);
+  
+      }
     
 
     /**

@@ -12,14 +12,30 @@ class ChambreRepository extends AbstractRepository{
         $this->tableName="chambre";
         
     }
+
+    function findAll():array{
+      $sql="select * from $this->tableName c , type_chambre t , pavillon p
+      where 
+      c.id_type_chambre= t.id_type_chambre 
+      and
+      c.id_pavillon=p.id_pavillon
+       ";
+       return $this->dataBase->executeSelect($sql);
+ }
    
-     function findAll():array{
+     /* function findAll():array{
          $sql="select * from $this->tableName ";
           return $this->dataBase->executeSelect($sql);
-      }
+      } */
       function findById(int $id): array{
 
-        $sql="select * from $this->tableName  where $this->primaryKey=?";
+        $sql="select * from $this->tableName c , type_chambre t  , pavillon p
+        where 
+        c.id_type_chambre = t.id_type_chambre
+        and
+        c.id_pavillon = p.id_pavillon
+        and
+        $this->primaryKey=? ";       
         return $this->dataBase->executeSelect($sql,[$id]);
           
       }
@@ -33,5 +49,14 @@ class ChambreRepository extends AbstractRepository{
 
 
       }
+
+      function findByPavillon2($nom_pav):array{
+        $sql="select * from $this->tableName c , pavillon p  
+        where 
+        c.id_pavillon=p.id_pavillon
+        and
+        nom_pavillon like ?";
+        return $this->dataBase->executeSelect($sql,[$nom_pav]);
+    }
       
 }

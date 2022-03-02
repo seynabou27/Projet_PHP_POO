@@ -7,6 +7,7 @@
   <li><a href="<?=WEBROOT."security/showAccueil"?>">Acceuil</a></li>
   <i class="fa-light fa-apartment"></i><li><a href="#">Pavillon</a>
 					<ul>
+          <li><a href="<?=WEBROOT."security/showRP"?>">Responsable</a></li>
 					<li><a href="<?=WEBROOT."pavillons/voirPavillon"?>">Ajout Pavillon</a></li>
           <li><a href="<?=WEBROOT."pavillons/showPavillon1"?>">Liste Pavillon</a></li>
 					</ul>

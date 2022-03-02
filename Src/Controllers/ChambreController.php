@@ -51,28 +51,35 @@ class ChambreController extends AbstractController{
              $this->validator->isVide($numero1,"numero1");
              $this->validator->isVide($numero2,"numero2");
             if($this->validator->valid()){
-             
-            $typechambre = new TypeChambre;
-            $typechambre->setId_type_chambre($id_type_chambre);
-            $chambre=new Chambre;
-            $cham=new ChambreManager;
-            $chambre->setNum_chambre($numero1);
-            $chambre->setNum_etage($numero2);
-            $chambre->setId_pavillon($id_pavillon);
-            $chambre->setId_type_chambre($id_type_chambre);
+                $typechambre = new TypeChambre;
+                $typechambre->setId_type_chambre($id_type_chambre);
+                $chambre=new Chambre;
+                $cham=new ChambreManager;
+                $chambre->setNum_chambre($numero1);
+                $chambre->setNum_etage($numero2);
+                $chambre->setId_pavillon($id_pavillon);
+                $chambre->setId_type_chambre($id_type_chambre);
+                if ($id==null) {
+                    $insert= Chambre::fromArray($chambre);    
+                    $cham->insert($insert);
+                    // var_dump($insert);die;
+                }else {
+                    $chambre->setId_chambre($id);
+                    $chambre->setEtat('non_archiver');
+                    $insert= Chambre::fromArrayUpdate($chambre);
+                    /* var_dump($insert) ;
+                    die;   */
+                    $cham->update($insert); 
+                    
+                }
+                $this->redirect("chambre/showChambre1");
 
-
-
-            $insert= Chambre::fromArray($chambre); 
-            /* var_dump($insert);
-            die(); */    
-            $cham->insert($insert);
+            
 
             }else{
                  Session::setSession("errors",$this->validator->getErreurs() );
                  $this->redirect("chambre/voirChambre");
             }
-            $this->redirect("chambre/showChambre1");
         }
         $type=$this->typeRepo->findAll();
         $hh=$this->pavillons->findAll();
@@ -115,11 +122,10 @@ class ChambreController extends AbstractController{
         $chambre->setNum_etage((int)$num_etage);
         $chambre->setId_pavillon($id_pavillon);
         $chambre->setId_type_chambre($id_type_chambre);
+        $chambre->setEtat($etat);
         $updates= Chambre::fromArray($chambre);  
-
-        $cham->update($updates);
-
-
+/*         var_dump($updates);die;
+ */        $cham->update($updates);
         $this->render("chambre/liste.chambre.html.php");
 
      }
@@ -130,26 +136,52 @@ class ChambreController extends AbstractController{
 
    
     public function voirChambre(){
-        
         $type=$this->typeRepo->findAll();
         $hh=$this->pavillons->findAll();
-
         $this->render("chambre/ajout.chambre.html.php",["type"=>$type,"hh"=>$hh]);
     }
+
+    public function ajoutChambre($id){
+        $id=$this->request->query();
+        $chambre_by_id=$this->chambre->findById($id[0]);
+       /*  var_dump($chambre_by_id[0]);
+        die; */ 
+        $type=$this->typeRepo->findAll();
+        $hh=$this->pavillons->findAll();
+        $this->render("chambre/ajout.chambre.html.php",["type"=>$type,"hh"=>$hh,"chambre_by_id"=>$chambre_by_id]);
+    }
+
+
+
     public function voirUpdateChambre(){
         $url=$this->request->query();
         $id = explode('=',$url[0]);
         $r = $this->chambre->findById((int)$id[1]);
-        var_dump($r);
+        //var_dump($r);
         $type=$this->typeRepo->findAll();
         $hh=$this->pavillons->findAll();
         $this->render("chambre/ajout.chambre.html.php",["type"=>$type,"hh"=>$hh,'restor'=>$r]);
     } 
 
     public function showChambre1(){
+        extract($this->request->request());
+        if (isset($ok)) {
+            $cham=$this->chambre->findByPavillon2();
+        }
         $cham=$this->chambre->findAll();
         $this->render("chambre/liste.chambre.html.php",["cham"=>$cham]);
     }
+
+        // $pavillons = $this->repo->findChambreByEtat('non_archivee');
+        // if (isset($ok)) {
+        //     $chambres=$this->repo->findByPavillon2($pav);
+        // }else {
+        //     $chambres=$this->repo->findChambreByEtat('non_archivee');
+        // }
+        // $this->render("chambre/liste.chambre.html.php",["chambres"=>$chambres,'pavillons'=>$pavillons]);
+        // }
+
+
     public function showArchiver(){
         $chamb=$this->chambre->findAll();
         

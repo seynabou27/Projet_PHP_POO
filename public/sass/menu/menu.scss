@@ -205,7 +205,7 @@ header{
 	margin-top: 2%;
 	margin-right: 1%;
   }
-@media screen and (max-width:540px) {
+@media screen and (max-width:640px) {
 	/*On annule le centrage du container*/
 	.menuContainer{
 		 width: auto; 
@@ -233,6 +233,16 @@ header{
 		lequel est passé à zéro lorsqu'on clique sur le label*/
 		transition:margin-left 0.5s ease-in-out;
 	}
+
+	.menuContainer > label {
+		display: none;
+		cursor: pointer;
+		vertical-align: top;
+		background: gray;
+		width: 54px;
+		height: 44px;
+		border-radius: 5px;
+	  }
 	/*Sous-menus*/
 	.menuContainer>ul>li>ul{
 		/*On annule le positionnement en absolute*/

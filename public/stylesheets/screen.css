@@ -497,7 +497,7 @@ header {
   margin-right: 1%;
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 640px) {
   /*On annule le centrage du container*/
   /* line 210, ../sass/menu/menu.scss */
   .menuContainer {
@@ -528,8 +528,19 @@ header {
     transition: margin-left 0.5s ease-in-out;
   }
 
-  /*Sous-menus*/
   /* line 237, ../sass/menu/menu.scss */
+  .menuContainer > label {
+    display: none;
+    cursor: pointer;
+    vertical-align: top;
+    background: gray;
+    width: 54px;
+    height: 44px;
+    border-radius: 5px;
+  }
+
+  /*Sous-menus*/
+  /* line 247, ../sass/menu/menu.scss */
   .menuContainer > ul > li > ul {
     /*On annule le positionnement en absolute*/
     position: static;
@@ -542,7 +553,7 @@ header {
     transition: none !important;
   }
 
-  /* line 248, ../sass/menu/menu.scss */
+  /* line 258, ../sass/menu/menu.scss */
   .menuContainer > label {
     display: inline-flex;
   }
@@ -577,7 +588,7 @@ header {
     width: 1298px;
   } */
 /* line 26, ../sass/etudiant/_liste.etudiant.scss */
-.table {
+.tables {
   align-items: center;
   justify-content: center;
   margin-bottom: 1rem;
@@ -624,7 +635,7 @@ header {
 }
 
 /* line 63, ../sass/etudiant/_liste.etudiant.scss */
-.table thead {
+.tables thead {
   background-color: #F0F0F0;
 }
 
@@ -661,9 +672,10 @@ p .etu {
   float: right;
   margin-top: -3%;
   text-align: center;
+  margin-right: 5%;
 }
 
-/* line 97, ../sass/etudiant/_liste.etudiant.scss */
+/* line 98, ../sass/etudiant/_liste.etudiant.scss */
 .filtre {
   border: 1px solid #171D2E;
   background-color: white;
@@ -676,21 +688,21 @@ p .etu {
   margin-right: 12%;
 }
 
-/* line 109, ../sass/etudiant/_liste.etudiant.scss */
+/* line 110, ../sass/etudiant/_liste.etudiant.scss */
 .filtr1 {
   float: right;
   margin-top: -3%;
-  margin-right: 12%;
+  margin-right: 18%;
 }
 
-/* line 115, ../sass/etudiant/_liste.etudiant.scss */
+/* line 116, ../sass/etudiant/_liste.etudiant.scss */
 input[type="checkbox"], input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
   margin-left: 37px;
 }
 
-/* line 120, ../sass/etudiant/_liste.etudiant.scss */
+/* line 121, ../sass/etudiant/_liste.etudiant.scss */
 .modif {
   border: 8px solid #171D2E;
   background-color: #171D2E;
@@ -698,7 +710,7 @@ input[type="checkbox"], input[type="radio"] {
   border-radius: 3px 3px 3px 3px;
 }
 
-/* line 128, ../sass/etudiant/_liste.etudiant.scss */
+/* line 129, ../sass/etudiant/_liste.etudiant.scss */
 .filt {
   border: 1px solid #171D2E;
   background-color: white;
@@ -708,18 +720,18 @@ input[type="checkbox"], input[type="radio"] {
   width: 32%;
 }
 
-/* line 140, ../sass/etudiant/_liste.etudiant.scss */
+/* line 141, ../sass/etudiant/_liste.etudiant.scss */
 .radio {
   margin-left: 4px;
 }
 
-/* line 143, ../sass/etudiant/_liste.etudiant.scss */
+/* line 144, ../sass/etudiant/_liste.etudiant.scss */
 .annonce {
   padding: 2%;
   margin-left: 2%;
 }
 
-/* line 151, ../sass/etudiant/_liste.etudiant.scss */
+/* line 152, ../sass/etudiant/_liste.etudiant.scss */
 :root {
   --sucess-color: #2ecc71;
   --error-color: #e74c3c;
@@ -744,25 +756,25 @@ input[type="checkbox"], input[type="radio"] {
       margin-top: 5%;
       height: 600PX;
   } */
-/* line 176, ../sass/etudiant/_liste.etudiant.scss */
+/* line 177, ../sass/etudiant/_liste.etudiant.scss */
 h2 {
   text-align: center;
   margin: 0 0 20px;
 }
 
-/* line 181, ../sass/etudiant/_liste.etudiant.scss */
+/* line 182, ../sass/etudiant/_liste.etudiant.scss */
 .form {
   padding: 0px 44px;
 }
 
-/* line 187, ../sass/etudiant/_liste.etudiant.scss */
+/* line 188, ../sass/etudiant/_liste.etudiant.scss */
 .form-controle {
   margin-bottom: 10px;
   padding-bottom: 20px;
   position: relative;
 }
 
-/* line 193, ../sass/etudiant/_liste.etudiant.scss */
+/* line 194, ../sass/etudiant/_liste.etudiant.scss */
 .form-controle label {
   color: #777;
   display: block;
@@ -770,26 +782,26 @@ h2 {
   margin-left: 21px;
 }
 
-/* line 200, ../sass/etudiant/_liste.etudiant.scss */
+/* line 201, ../sass/etudiant/_liste.etudiant.scss */
 .form-controle .email {
   width: 818px;
 }
 
-/* line 203, ../sass/etudiant/_liste.etudiant.scss */
+/* line 204, ../sass/etudiant/_liste.etudiant.scss */
 .select {
   width: 819px;
   margin-left: 6px;
   padding: 13px;
 }
 
-/* line 208, ../sass/etudiant/_liste.etudiant.scss */
+/* line 209, ../sass/etudiant/_liste.etudiant.scss */
 .form-controle select:focus {
   outline: 0;
   border-color: white;
   background-color: white;
 }
 
-/* line 213, ../sass/etudiant/_liste.etudiant.scss */
+/* line 214, ../sass/etudiant/_liste.etudiant.scss */
 .form-controle input {
   border: 2px solid #f0f0f0;
   border-radius: 4px;
@@ -800,18 +812,18 @@ h2 {
   margin-left: 21px;
 }
 
-/* line 223, ../sass/etudiant/_liste.etudiant.scss */
+/* line 224, ../sass/etudiant/_liste.etudiant.scss */
 .form-controle input:focus {
   outline: 0;
   border-color: #777;
 }
 
-/* line 228, ../sass/etudiant/_liste.etudiant.scss */
+/* line 229, ../sass/etudiant/_liste.etudiant.scss */
 .form-controle.success input {
   border-color: var(--success-color);
 }
 
-/* line 232, ../sass/etudiant/_liste.etudiant.scss */
+/* line 233, ../sass/etudiant/_liste.etudiant.scss */
 .form-controle.error input {
   border-color: var(--error-color);
 }
@@ -823,7 +835,7 @@ h2 {
     left: 0;
     visibility: hidden;
 } */
-/* line 244, ../sass/etudiant/_liste.etudiant.scss */
+/* line 245, ../sass/etudiant/_liste.etudiant.scss */
 .form-controle.error small {
   visibility: visible;
 }
@@ -840,7 +852,7 @@ h2 {
     margin-top: 20px;
     width: 50%;
   } */
-/* line 260, ../sass/etudiant/_liste.etudiant.scss */
+/* line 261, ../sass/etudiant/_liste.etudiant.scss */
 .ajouter {
   border: 0.5px solid #171D2E;
   background-color: #171D2E;
@@ -848,19 +860,19 @@ h2 {
   border-radius: 3px 3px 3px 3px;
 }
 
-/* line 268, ../sass/etudiant/_liste.etudiant.scss */
+/* line 269, ../sass/etudiant/_liste.etudiant.scss */
 .tt {
   display: flex;
   float: right;
   margin-right: 35%;
 }
 
-/* line 273, ../sass/etudiant/_liste.etudiant.scss */
+/* line 274, ../sass/etudiant/_liste.etudiant.scss */
 .a {
   margin-right: 11%;
 }
 
-/* line 276, ../sass/etudiant/_liste.etudiant.scss */
+/* line 277, ../sass/etudiant/_liste.etudiant.scss */
 .annuler {
   border: 1px solid #171D2E;
   background-color: white;
@@ -870,7 +882,7 @@ h2 {
   /*         text-align: center;*/
 }
 
-/* line 286, ../sass/etudiant/_liste.etudiant.scss */
+/* line 287, ../sass/etudiant/_liste.etudiant.scss */
 .nav-link {
   display: block;
   padding: 0.5rem 2rem;

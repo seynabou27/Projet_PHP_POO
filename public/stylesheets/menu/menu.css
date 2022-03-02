@@ -228,7 +228,7 @@ header {
   margin-right: 1%;
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 640px) {
   /*On annule le centrage du container*/
   /* line 210, ../../sass/menu/menu.scss */
   .menuContainer {
@@ -259,8 +259,19 @@ header {
     transition: margin-left 0.5s ease-in-out;
   }
 
-  /*Sous-menus*/
   /* line 237, ../../sass/menu/menu.scss */
+  .menuContainer > label {
+    display: none;
+    cursor: pointer;
+    vertical-align: top;
+    background: gray;
+    width: 54px;
+    height: 44px;
+    border-radius: 5px;
+  }
+
+  /*Sous-menus*/
+  /* line 247, ../../sass/menu/menu.scss */
   .menuContainer > ul > li > ul {
     /*On annule le positionnement en absolute*/
     position: static;
@@ -273,7 +284,7 @@ header {
     transition: none !important;
   }
 
-  /* line 248, ../../sass/menu/menu.scss */
+  /* line 258, ../../sass/menu/menu.scss */
   .menuContainer > label {
     display: inline-flex;
   }

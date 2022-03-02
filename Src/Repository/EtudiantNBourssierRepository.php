@@ -13,8 +13,7 @@ class EtudiantNBourssierRepository extends EtudiantRepository {
         $sql="select * from $this->tableName where type like ?  ";
          return $this->dataBase->executeSelect( $sql,[$this->type ]);
     } */
-    public function findEtuNonBoursier()
-    {
+    public function findEtuNonBoursier(){
         $sql="select * from $this->tableName where adresse IS NOT NULL";
         return $this->dataBase->executeSelect( $sql);
 

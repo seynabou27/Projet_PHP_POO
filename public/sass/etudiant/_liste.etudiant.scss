@@ -23,7 +23,7 @@
     padding: 0;
     width: 1298px;
   } */
-.table {
+.tables {
    align-items: center;
    justify-content: center;
     margin-bottom: 1rem;
@@ -60,7 +60,7 @@
     margin-top: 8%;
     margin-left: 3%;
   }
-.table thead{
+.tables thead{
   background-color: #F0F0F0;
 }
  .etud{
@@ -93,6 +93,7 @@ width: 140px;
 float: right;
 margin-top: -3%;  
 text-align: center;
+margin-right: 5%;
 }  
 .filtre{
 
@@ -110,7 +111,7 @@ text-align: center;
   float: right;
   margin-top: -3%;  
   
-  margin-right: 12%;
+  margin-right: 18%;
 } 
 input[type="checkbox"], input[type="radio"] {
   box-sizing: border-box;

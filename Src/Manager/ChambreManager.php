@@ -18,9 +18,13 @@ public function insert(array $model):int{
         return $this->dataBase->executeUpdate($sql,$model);
     }
 public  function update(array $model):int{
-        $sql="update  $this->tableName  `chambre` set 
-               `num_chambre`=?, `num_etage`=? ,`id_type_chambre`=? ,`id_pavillon` =?, `etat` =?
-                 where $this->primaryKey=?";
+        $sql="update  $this->tableName set 
+            `num_chambre`=?, 
+            `num_etage`=? ,
+            `id_type_chambre`=? ,
+            `id_pavillon` =?, 
+            `etat` =?
+            where $this->primaryKey=?";
         return $this->dataBase->executeUpdate($sql,$model);
       }
 }
