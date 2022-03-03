@@ -29,14 +29,16 @@
 
   </div>
 
+  <div class="container">
   <table class="container table ">
   <thead>
     <tr>
       
       <th scope="col">Prenom/Nom</th>
-      <th scope="col">bourse</th>
+      <th scope="col">Bourse</th>
       <th scope="col">Tuteur</th>
       <th scope="col">Date naissance</th>
+      <th scope="col">Chambre</th>
       <th scope="col">Adresse</th>
 
 
@@ -49,12 +51,14 @@
       <td><?=isset($user->id_bourse)? $b : "-"?></td>
       <td><?=$user->tuteur?></td>
       <td><?=$user->date_naissance?></td>
+      <td></td>
       <td><?=isset($user->adresse) ?$user->adresse : "-" ?></td>
     </tr>
 <?php endforeach ?>   
     
   </tbody>
 </table>
+  </div>
   </div>
 
 </div>

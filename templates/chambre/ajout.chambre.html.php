@@ -50,6 +50,7 @@ if(Session::keyExist("errors")){
             <div class="form-controle" id="fcb">
                 <label for="type"></label>
                     <select  class="select1" name="id_type_chambre" id="">
+                        <option value="[0]">Choisir</option>
                          <option value="<?=isset($chambre_by_id[0]->id_chambre) ? $chambre_by_id[0]->id_type_chambre:'';?>"><?=isset($chambre_by_id[0]->id_chambre) ? $chambre_by_id[0]->nom_type_chambre:''?></option>
                          <?php foreach($type as $types): ?>
                             <option value="<?=$types->id_type_chambre?>"><?=$types->nom_type_chambre?></option>
@@ -61,6 +62,7 @@ if(Session::keyExist("errors")){
             <div class="form-controle" id="fcb">
                 <label for="type"></label>
                     <select  class="select1" name="id_pavillon" id="">
+                    <option value="[0]">Choisir</option>
                          <option value="<?=isset($chambre_by_id[0]->id_chambre) ? $chambre_by_id[0]->id_pavillon:'';?>"><?=isset($chambre_by_id[0]->id_chambre) ? $chambre_by_id[0]->nom_pavillon:'';?></option>
                          <?php 
                          foreach($hh as $pavil): ?>

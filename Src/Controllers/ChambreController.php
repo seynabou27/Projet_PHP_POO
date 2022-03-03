@@ -60,9 +60,10 @@ class ChambreController extends AbstractController{
                 $chambre->setId_pavillon($id_pavillon);
                 $chambre->setId_type_chambre($id_type_chambre);
                 if ($id==null) {
-                    $insert= Chambre::fromArray($chambre);    
+                    $insert= Chambre::fromArray1($chambre);  
+                    //var_dump($insert);die;  
                     $cham->insert($insert);
-                    // var_dump($insert);die;
+                    
                 }else {
                     $chambre->setId_chambre($id);
                     $chambre->setEtat('non_archiver');
@@ -166,8 +167,8 @@ class ChambreController extends AbstractController{
     public function showChambre1(){
         extract($this->request->request());
         if (isset($ok)) {
-            $cham=$this->chambre->findByPavillon2();
-        }
+/*             $cham=$this->chambre->findByPavillon2();
+ */        }
         $cham=$this->chambre->findAll();
         $this->render("chambre/liste.chambre.html.php",["cham"=>$cham]);
     }

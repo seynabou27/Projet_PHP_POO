@@ -28,8 +28,8 @@ class Chambre{
     //   $arr[]=$arr[3];
     //   $arr[]=$arr[4];
     //   $arr[]=$arr[5];
-    //   $arr[]=$arr[0];
-        // unset($arr[0]);
+       $arr[]=$arr[0];
+         unset($arr[0]);
         // unset($arr[1]);
         // unset($arr[2]); 
         // unset($arr[3]); 
@@ -38,6 +38,16 @@ class Chambre{
         return  array_values($arr);
 
     }
+
+    public static function  fromArray1(object $chambre):array{
+        $arr=  array_values((array)$chambre);
+     
+        //$arr[]=$arr[0];
+          // unset($arr[0]);
+           
+          return  array_values($arr);
+  
+      }
 
 
 
