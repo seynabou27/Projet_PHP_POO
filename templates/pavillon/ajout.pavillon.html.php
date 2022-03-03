@@ -23,7 +23,7 @@ if(Session::keyExist("errors")){
 <div class="principale">
     <p class="annonce">Pour ajouter une nouvelle pavillon, veuillez remplir <br> <br> le formulaire ci-dessous</p>
     <form class=form  method="post" action="<?=WEBROOT."pavillons/ajout_pavillon"?>" enctype="multipart/form-data">
-    <input type="hidden" name="controllers" value="pavillonsCcontroller"/>
+    <input type="hidden" value="<?=isset($pavillon_by_id[0]->id_pavillon) ? $pavillon_by_id[0]->id_pavillon:'';?>" name="id">
 
 
     <div class="form1">

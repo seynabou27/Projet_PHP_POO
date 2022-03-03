@@ -18,7 +18,12 @@ class PavillonManager extends AbstractManager{
         return $this->dataBase->executeUpdate($sql,$model);
     }
       public  function update(array $model):int{
-        $sql="update  $this->tableName  `chambre` ( `num_chambre`, `num_etage`, `id_type_chambre`, `id_pavillon`) VALUES (?, ?, ?, ?); $this->primaryKey=?";
+        $sql="UPDATE $this->tableName SET 
+         `nom_pavillon` = ?, 
+         `num_pavillon` = ?, 
+         `nbr_etage` = ? 
+         WHERE  
+         $this->primaryKey=?";
         return $this->dataBase->executeUpdate($sql,$model);
       }
 }

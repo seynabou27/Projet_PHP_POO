@@ -45,9 +45,24 @@ class PavillonsController extends AbstractController{
             $pavs->setNum_pavillon($pavillon1);
             $pavs->setNbr_etage($pavillon2);
 
-            $insert= Pavillon::fromArray($pavs); 
+            if ($id==null) {
+                $insert= Pavillon::fromArray($pavs); 
            /*  var_dump($insert);
-            die();  */    
+            die();  */ 
+                $cham->insert($insert);
+                
+            }else {
+                $pavs->setNom_pavillon($nompav);
+                $pavs->setNum_pavillon($pavillon1);
+                $pavs->setNbr_etage($pavillon2);
+                $updates= Pavillon::fromArray1($pavillon);
+                /* var_dump($insert) ;
+                die;   */
+                $pavillon->update($updates);
+                
+            }
+
+              
             $pavillon->insert($insert);
                
 
@@ -63,15 +78,41 @@ class PavillonsController extends AbstractController{
          $this->render("pavillon/ajout.pavillon.html.php");
      }    
     
+     public function updatePavillon(Request $request){
+
+        extract($request->request());
+
+        $pavillon=new pavillonManager;
+        $pavs=new Pavillon;
+        $pavs->setId_pavillon($id_pav);
+        $pavs-> setNom_pavillon($nom_pavillon);
+        $pavs-> setNum_pavillon($num_pavillon);
+        $pavs-> setNbr_etage($nbr_etage);
+
+
+        $updates= Pavillon::fromArray1($pavs);  
+         //var_dump($updates);die;
+         $pavillon->update($updates);
+
+        $this->render("pavillon/liste.pavillon.html.php");
+
+    }
 
    
-    public function voirPavillon(){
+    public function voirPavillon($id_pav){
+        $id_pav=$this->request->query();
         
-         $this->render("pavillon/ajout.pavillon.html.php");
+        $pavillon_by_id=$this->pavRepo->findById((int)$id_pav[0]);
+        /* var_dump($id_pav[0]);
+        die; */   
+        
+        
+         $this->render("pavillon/ajout.pavillon.html.php",["pavillon_by_id"=>$pavillon_by_id]);
     }
 
     public function showPavillon1(){
         $pavi=$this->pavRepo->findAll();
+        
          /* var_dump($pavi);
         die('gtuhuh');  */
         $this->render("pavillon/liste.pavillon.html.php",["pavi"=>$pavi]);

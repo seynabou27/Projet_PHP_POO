@@ -7,17 +7,19 @@
 <div class="titr">
      <H4 class="etud">Listes des chambres</H4>
 
-     <a type="button" class="nav-link ajout" href="<?=WEBROOT."chambre/voirchambre"?>"><i class="fas fa-plus "></i>Ajouter</a>
+     <a type="button" class="nav-link ajout" href="<?=WEBROOT."chambre/voirChambre"?>"><i class="fas fa-plus "></i>Ajouter</a>
 
      <div class=" form-inline filtr1">
           <label class="mr-3">Type </label>
-          <form method="post" action="<?=WEBROOT."chambre/"?>">
-                <select class="form-control" name="" id="">
-                  <option value="">Choisir</option>
-                  <option value=""></option>
-                  <option value=""></option>
+          <form method="post" action="<?=WEBROOT."chambre/showChambre1"?>">
+                <select class="form-control" name="filtres" id="id_pavillon">
+                  <option value="0">Choisir</option>
+                  <?php foreach ($cham as $chams):?>
+                  <option value="<?=$chams->id_pavillon?>"><?=$chams->nom_pavillon?></option>
+                  <?php endforeach ?>   
+
                 </select>
-                <button type="submit" class="btn b" name="filtre" style="background-color: white; color:#171D2E;border: 2px solid #171D2E;" name="ok" style="background-color: #005CA5; color:#fff;"><b>Filter</b></button>
+                <button type="submit" class="btn b" name="filtre" style="background-color: white; color:#171D2E;border: 2px solid #171D2E;"  style="background-color: #005CA5; color:#fff;"><b>Filter</b></button>
          </form>
           </div>  
 <!--     <a type="button" class="nav-link  filtre" href="#">Filtre</a>

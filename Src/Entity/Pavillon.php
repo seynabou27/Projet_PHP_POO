@@ -27,6 +27,19 @@ class Pavillon {
 
         return  array_values($arr);
     }
+    public static function  fromArray1(object $pavillon):array{
+        $arr=  array_values((array)$pavillon);
+        /* $arr[]=$arr[0];
+        $arr[]=$arr[1];
+        $arr[]=$arr[2];
+          unset($arr[0]);
+          unset($arr[1]);
+          unset($arr[2]); */
+         
+  
+          return  array_values($arr);
+      }
+  
 
     /**
      * Get the value of id_pavillon

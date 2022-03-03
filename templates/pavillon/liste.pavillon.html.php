@@ -54,7 +54,7 @@
           <td><?=$pavss->nom_pavillon?></td>
             <td><?=$pavss->num_pavillon?></td>
             <td><?=$pavss->nbr_etage?></td>
-        <td><a href="#"  class="modif1">Modifier</a></td>
+        <td><a href="<?=WEBROOT."pavillon/voirPavillon".$pavss->id_pavillon?>"  class="modif1">Modifier</a></td>
 
       </tr>
   <?php endforeach ?>   

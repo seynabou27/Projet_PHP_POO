@@ -165,12 +165,21 @@ class ChambreController extends AbstractController{
     } 
 
     public function showChambre1(){
-        extract($this->request->request());
-        if (isset($ok)) {
-/*             $cham=$this->chambre->findByPavillon2();
- */        }
         $cham=$this->chambre->findAll();
-        $this->render("chambre/liste.chambre.html.php",["cham"=>$cham]);
+        $pav = $this->pavillons->findAll();
+        if ($this->request->isPost()) {
+            extract($this->request->request());
+            $pav=$this->pavillons->findAll();
+            if (isset($filtre)) {
+                  $cham=$this->chambre->findAll();
+            }else{
+                $pav=$this->chambre->findAll();
+            }
+            
+            $post = $this->request->request();
+            
+         }
+        $this->render("chambre/liste.chambre.html.php",["cham"=>$cham,"pav"=>$pav]);
     }
 
         // $pavillons = $this->repo->findChambreByEtat('non_archivee');
