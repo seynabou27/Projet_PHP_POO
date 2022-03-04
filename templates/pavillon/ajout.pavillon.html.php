@@ -23,7 +23,7 @@ if(Session::keyExist("errors")){
 <div class="principale">
     <p class="annonce">Pour ajouter une nouvelle pavillon, veuillez remplir <br> <br> le formulaire ci-dessous</p>
     <form class=form  method="post" action="<?=WEBROOT."pavillons/ajout_pavillon"?>" enctype="multipart/form-data">
-    <input type="hidden" value="<?=isset($pavillon_by_id[0]->id_pavillon) ? $pavillon_by_id[0]->id_pavillon:'';?>" name="id">
+    <input type="hidden" value="<?=isset($pavillon_by_id[0]->id_pavillon) ? $pavillon_by_id[0]->id_pavillon:'';?>" name="id_pav">
 
 
     <div class="form1">
@@ -31,7 +31,7 @@ if(Session::keyExist("errors")){
     <div class="row">
       <div class="form-controle">
         <label for="nom"></label>
-                <input type="text" class="email" name="nompav" placeholder="Nom du pavillon">
+                <input type="text" class="email" name="nompav" placeholder="Nom du pavillon" value="<?=isset($pavillon_by_id[0]->id_pavillon) ? $pavillon_by_id[0]->nom_pavillon:'';?>">
                 <?php if(isset($arrErrors['nompav'])): ?>
                     <small id=""  class="form-text text-danger"><?=$arrErrors['nompav']?></small>
                 <?php endif ?>        
@@ -40,7 +40,7 @@ if(Session::keyExist("errors")){
        <div class="row">
            <div class="form-controle">
                 <label for="nom"></label>
-                <input type="text"  name="pavillon1" placeholder="Numéro du pavillon">
+                <input type="text"  name="pavillon1" placeholder="Numéro du pavillon" value="<?=isset($pavillon_by_id[0]->id_pavillon) ? $pavillon_by_id[0]->num_pavillon:'';?>">
                 <?php if(isset($arrErrors['pavillon1'])): ?>
                     <small id=""  class="form-text text-danger"><?=$arrErrors['pavillon1']?></small>
                 <?php endif ?>
@@ -50,7 +50,7 @@ if(Session::keyExist("errors")){
            <div class="form-controle">
 
             <label for="prenom"></label>
-            <input type="text" name="pavillon2" placeholder="Nombre d'etages ">
+            <input type="text" name="pavillon2" placeholder="Nombre d'etages " value="<?=isset($pavillon_by_id[0]->id_pavillon) ? $pavillon_by_id[0]->nbr_etage:'';?>">
             <?php if(isset($arrErrors['pavillon2'])): ?>
                 <small id=""  class="form-text text-danger"><?=$arrErrors['pavillon2']?></small>
             <?php endif ?>

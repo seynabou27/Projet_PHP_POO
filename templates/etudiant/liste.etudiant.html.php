@@ -40,6 +40,8 @@
       <th scope="col">Date naissance</th>
       <th scope="col">Chambre</th>
       <th scope="col">Adresse</th>
+      <th scope="col">Telephone</th>
+
 
 
     </tr>
@@ -51,8 +53,10 @@
       <td><?=isset($user->id_bourse)? $b : "-"?></td>
       <td><?=$user->tuteur?></td>
       <td><?=$user->date_naissance?></td>
-      <td></td>
+      <td><?=isset($user->chambre) ?$user->chambre : "-" ?></td>
       <td><?=isset($user->adresse) ?$user->adresse : "-" ?></td>
+      <td><?=$user->telephone?></td>
+
     </tr>
 <?php endforeach ?>   
     

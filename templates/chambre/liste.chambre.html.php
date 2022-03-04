@@ -10,7 +10,7 @@
      <a type="button" class="nav-link ajout" href="<?=WEBROOT."chambre/voirChambre"?>"><i class="fas fa-plus "></i>Ajouter</a>
 
      <div class=" form-inline filtr1">
-          <label class="mr-3">Type </label>
+          <label class="mr-3">Pavillon </label>
           <form method="post" action="<?=WEBROOT."chambre/showChambre1"?>">
                 <select class="form-control" name="filtres" id="id_pavillon">
                   <option value="0">Choisir</option>
