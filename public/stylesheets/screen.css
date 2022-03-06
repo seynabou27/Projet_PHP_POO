@@ -1013,6 +1013,11 @@ h2 {
   display: flex;
 }
 
+/* line 53, ../sass/pavillon/_pavillon.scss */
+.btne {
+  margin-left: 39%;
+}
+
 /* line 28, ../sass/screen.scss */
 * {
   box-sizing: border-box;

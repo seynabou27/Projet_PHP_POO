@@ -12,6 +12,10 @@ class DataBase{
     private const USER_BD="root";
     private const PASSWORD_BD="Nabou";
     private const HOST_BD="mysql:dbname=Projet_POO;host=localhost";
+ 
+    // private const USER_BD="seynabou";
+    // private const PASSWORD_BD="Passer@123";
+    // private const HOST_BD="mysql:dbname=seynabou_base;host=mysql-seynabou.alwaysdata.net";
 
     public function __construct()
     {

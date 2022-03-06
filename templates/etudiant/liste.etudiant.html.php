@@ -21,7 +21,7 @@
                   <option value="boursier">Bourssier</option>
                   <option value="nonboursier">Non Boursier</option>
                 </select>
-                <button type="submit" class="btn b" name="filtre" style="background-color: white; color:#171D2E;border: 2px solid #171D2E;" name="ok" style="background-color: #005CA5; color:#fff;"><b>Filter</b></button>
+                <button type="submit" class="btn b" name="filtre" style="background-color: white; color:#171D2E;border: 2px solid #171D2E;" name="ok" style="background-color: #005CA5; color:#fff;"> <i class="fas fa-filter"></i> <b>Filter</b></button>
          </form>
           </div>
 <!--     <a type="button" class="nav-link  filtre" href="#">Filtre</a>

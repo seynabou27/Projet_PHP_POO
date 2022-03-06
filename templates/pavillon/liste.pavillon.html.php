@@ -15,7 +15,7 @@
         <a type="button" class="nav-link fil" href="#">Filtre</a>
 
       </div>  --> 
-      <div class="btn">
+      <div class="btne">
         <a type="button" class="nav-link ajo" href="<?=WEBROOT."pavillons/voirPavillon"?>"><i class="fas fa-plus "></i>Ajouter</a>
 
       </div>
@@ -40,7 +40,7 @@
           <td><?=$pavss->nom_pavillon?></td>
             <td><?=$pavss->num_pavillon?></td>
             <td><?=$pavss->nbr_etage?></td>
-        <td><a href="<?=WEBROOT."pavillons/voirPavillonUpdate/".$pavss->id_pavillon?>"  class="modif1">Modifier</a></td>
+        <td><a href="<?=WEBROOT."pavillons/voirPavillonUpdate/".$pavss->id_pavillon?>"  class="modif1"><i class="fas fa-edit "></i>  Modifier</a></td>
 
       </tr>
   <?php endforeach ?>   
