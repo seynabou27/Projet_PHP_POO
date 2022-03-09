@@ -17,6 +17,12 @@ class BourseRepository extends AbstractRepository{
         $sql="select * from $this->tableName";
          return $this->dataBase->executeSelect($sql);
     }
+    public function findEtuBoursier(){
+        $sql = "select * from $this->tableName p
+                    INNER JOIN bourse b 
+                        ON p.id_bourse=b.id_bourse ";
+         return $this->dataBase->executeSelect( $sql);
+    }
     
     
 

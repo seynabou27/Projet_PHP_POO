@@ -12,7 +12,7 @@ if(Session::keyExist("errors")){
 
 <div class="groupe3">
     <div class="outline">
-       <a class="text12" href="<?=WEBROOT."chambre/showChambre1"?>"> <img  src="./../img/outline.png" alt="hhhh">Retour vers chambre</a>
+       <a class="text122" href="<?=WEBROOT."chambre/showChambre1"?>"> <img  src="./../img/outline.png" alt="hhhh">Retour vers chambre</a>
 
     </div>    
     <h3 class="text"><b>Ajout chambres</b></h3>

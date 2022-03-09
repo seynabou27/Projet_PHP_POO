@@ -5,21 +5,12 @@
   </div>
 
 <div class="pavillon">
-  <div class="row pav">
-    <div class="pav1 col-6 ">
-      <H4>Listes des chambres</H4>
+  <div class=" pavv">
+    <div class="pav1 ">
+      <H4>Listes des responsables</H4>
 
     </div>  
-    <div class="pav2 col-4 ">
-      <div class="btn1 ">
-<!--         <a type="button" class="nav-link fil" href="#">Filtre</a>
- -->
-      </div>  
-      <div class="btn" style="margin-left: 23%;">
-        <a type="button" class="nav-link ajo" href="<?=WEBROOT."chambre/voirchambre"?>"><i class="fas fa-plus "></i>Ajouter</a>
-
-      </div>
-    </div>
+  
   </div>
   <div class="container">
   <table class="table">

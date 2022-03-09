@@ -17,6 +17,12 @@ class DataBase{
     // private const PASSWORD_BD="Passer@123";
     // private const HOST_BD="mysql:dbname=seynabou_base;host=mysql-seynabou.alwaysdata.net";
 
+    // private const USER_BD="id18571387_seynabou";
+    // private const PASSWORD_BD="xc]oT<5!#n1!Zn$*";
+    // private const HOST_BD="mysql:dbname=id18571387_projet_poo;host=localhost";
+ 
+
+
     public function __construct()
     {
           $this->openConnexion();

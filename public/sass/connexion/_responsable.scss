@@ -40,9 +40,12 @@
         color: rgba(255, 255, 255, 0.9);
     }
     .image img{
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 58vh;
         margin: 0;
         padding: 0;
-        width: 1310px;
+        width: 1298px;;
     }
     .table thead{
       background-color: #F0F0F0;
@@ -60,8 +63,13 @@
       z-index: 2;
       color: white;
       font-size: 23px;
-      margin-top: 10%;
+      margin-top: 6%;
       margin-left: 3%;
+    }
+    .pavv  {
+      display: flex;
+      padding: 2%;
+      margin-left: 6%;
     }
    
     

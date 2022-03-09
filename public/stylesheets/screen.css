@@ -237,35 +237,45 @@ a {
 
 /* line 42, ../sass/connexion/_responsable.scss */
 .image img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 58vh;
   margin: 0;
   padding: 0;
-  width: 1310px;
+  width: 1298px;
 }
 
-/* line 47, ../sass/connexion/_responsable.scss */
+/* line 50, ../sass/connexion/_responsable.scss */
 .table thead {
   background-color: #F0F0F0;
 }
 
-/* line 51, ../sass/connexion/_responsable.scss */
+/* line 54, ../sass/connexion/_responsable.scss */
 .tableau {
   padding: 2%;
 }
 
-/* line 54, ../sass/connexion/_responsable.scss */
+/* line 57, ../sass/connexion/_responsable.scss */
 .titre3 {
   padding: 2%;
   font-size: 20px;
 }
 
-/* line 58, ../sass/connexion/_responsable.scss */
+/* line 61, ../sass/connexion/_responsable.scss */
 .bienvenu {
   position: absolute;
   z-index: 2;
   color: white;
   font-size: 23px;
-  margin-top: 10%;
+  margin-top: 6%;
   margin-left: 3%;
+}
+
+/* line 69, ../sass/connexion/_responsable.scss */
+.pavv {
+  display: flex;
+  padding: 2%;
+  margin-left: 6%;
 }
 
 /*DÉBUT RESET*/
@@ -319,7 +329,7 @@ a:active {
 header {
   width: auto;
   background-color: #171D2E;
-  height: 78px;
+  height: 83px;
 }
 
 /* line 53, ../sass/menu/menu.scss */
@@ -960,6 +970,16 @@ h2 {
   padding: 13px;
 }
 
+/* line 72, ../sass/chambre/_chambre.scss */
+.text122 {
+  position: absolute;
+  z-index: 2;
+  color: white;
+  font-size: 15px;
+  margin-top: 1%;
+  margin-left: -37%;
+}
+
 /* line 1, ../sass/pavillon/_pavillon.scss */
 * {
   box-sizing: border-box;
@@ -1016,6 +1036,16 @@ h2 {
 /* line 53, ../sass/pavillon/_pavillon.scss */
 .btne {
   margin-left: 39%;
+}
+
+/* line 57, ../sass/pavillon/_pavillon.scss */
+.text124 {
+  position: absolute;
+  z-index: 2;
+  color: white;
+  font-size: 15px;
+  margin-top: 1%;
+  margin-left: -37%;
 }
 
 /* line 28, ../sass/screen.scss */

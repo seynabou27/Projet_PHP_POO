@@ -1,5 +1,5 @@
 <div class="image">
-     <p class="bienvenu"><b>Bienvenue! <br>  Université Cheikh Anta Diop</b></p>
+     <p class="bienvenu"><b>Bienvenue! <br> <br>  Université Cheikh Anta Diop</b></p>
  
     <img src="./../img/groupe2.png" alt="hhhhh">
 
@@ -15,7 +15,7 @@
                         <div class="col-md-6">
                           <span>
                             <h3 class=chiffre>
-                                <b> 30<?=$client[0]["user"]?></b>
+                                <b> 30</b>
                             </h3>
                           </span>
                         </div>                                  
@@ -32,7 +32,7 @@
                     <div class="row">
                         <div class="col-md-6">
                         <h3 class=chiffre>
-                                <b> 10<?=$reservation[0]["reservation"]?></b>
+                                <b> 10</b>
 
                             </h3>
                         </div>
@@ -48,7 +48,7 @@
                     <div class="row">
                         <div class="col-md-6">
                         <h3 class=chiffre>
-                                <b> 30<?=$catego[0]["categorie"]?></b>
+                                <b> 30</b>
 
                             </h3>
                         </div>

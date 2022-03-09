@@ -51,11 +51,9 @@ class ChambreRepository extends AbstractRepository{
       }
 
       function findByPavillon2($nom_pav):array{
-        $sql="select * from $this->tableName c , pavillon p  
-        where 
-        c.id_pavillon=p.id_pavillon
-        and
-        nom_pavillon like ?";
+        $sql="select * from $this->tableName c LEFT JOIN  pavillon p  
+        
+        c.id_pavillon=p.id_pavillon";
         return $this->dataBase->executeSelect($sql,[$nom_pav]);
     }
 

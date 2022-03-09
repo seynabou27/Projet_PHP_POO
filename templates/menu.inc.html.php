@@ -5,7 +5,7 @@
   <a class="" href="<?=WEBROOT."security/showRP"?>"><b>UCAD</b></a>
 
   <li><a href="<?=WEBROOT."security/showAccueil"?>"><img src="./../img/home.svg"> Acceuil</a></li>
-  <li><a href="<?=WEBROOT."pavillons/showPavillon1"?>"> <img src="./../img/app.svg">Pavillon</a>
+  <li><a href="#"> <img src="./../img/app.svg">Pavillon</a>
 					<ul>
           <li><a href="<?=WEBROOT."security/showRP"?>">Responsable</a></li>
 					<li><a href="<?=WEBROOT."pavillons/voirPavillon"?>">Ajout Pavillon</a></li>
@@ -17,7 +17,7 @@
 				</li>
         <li><a href="<?=WEBROOT."etudiant/showEtudiants"?>" class="plus"> <img src="./../img/sc.svg">Etudiants</a>
 					<ul>
-            <li><a href="<?=WEBROOT."etudiant/showEtudiants1"?>">Ajout Etudiant</a></li>
+            <li><a href="#">Ajout Etudiant</a></li>
             <li><a href="<?=WEBROOT."etudiant/showEtudiants"?>">Liste Etudiant</a></li>
 
 					</ul>

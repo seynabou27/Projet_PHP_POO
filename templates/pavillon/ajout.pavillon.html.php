@@ -13,7 +13,7 @@ if(Session::keyExist("errors")){
 
 <div class="groupe3">
     <div class="outline">
-       <a class="text12" href="<?=WEBROOT."pavillons/showPavillon1"?>"> <img  src="./../img/outline.png" alt="hhhh">Retour vers pavillon</a>
+       <a class="text124" href="<?=WEBROOT."pavillons/showPavillon1"?>"> <img  src="./../img/outline.png" alt="hhhh">Retour vers pavillon</a>
 
     </div>    
     <h3 class="text"><b>Ajout Pavillon</b></h3>
